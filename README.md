@@ -1,16 +1,16 @@
-# power-electronics-ai999x — offline, verified power electronics solver with step-by-step answers
+# power-electronics-ai999x: offline, verified power electronics solver with step-by-step answers
 
 [![tests](https://github.com/AI999X/power-electronics-ai999x/actions/workflows/ci.yml/badge.svg)](https://github.com/AI999X/power-electronics-ai999x/actions/workflows/ci.yml) [![PyPI](https://img.shields.io/pypi/v/power-electronics-ai999x)](https://pypi.org/project/power-electronics-ai999x/) [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Hugging%20Face-yellow)](https://huggingface.co/AI999X/power-electronics-ai999x)
 
 **[Desktop app & command line](https://www.ai999x.com/desktop-cli/)** · **[Compute in your browser](https://www.ai999x.com/models/power-electronics-ai999x/#try)** · **[Install (Python)](https://pypi.org/project/power-electronics-ai999x/)** · **[Guides](https://huggingface.co/AI999X/power-electronics-ai999x/tree/main/docs)** · **[Evaluation](https://huggingface.co/AI999X/power-electronics-ai999x/tree/main/evaluation)** · **[AI999X on Hugging Face](https://huggingface.co/AI999X)** · **[Website](https://ai999x.com)** · **[Support: Buy Me a Coffee](https://buymeacoffee.com/ibnuljaiffarabi)**
 
-License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.1.0
+License: Apache-2.0 · Author: Ibnul Jaif Farabi (creator and engineer) · Organization: AI999X · Version 1.5.0
 
-Field: **Engineering** · Tasks: Question Answering, Sentence Similarity, Feature Extraction
+Field: **Engineering** · Tasks: Question Answering
 
-power-electronics-ai999x is an offline, deterministic Python solver that answers power electronics questions with verified results from 79 certified capabilities, gives 482 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
+power-electronics-ai999x is an offline, deterministic power electronics solver written in Rust: a desktop app, a command-line program, a browser module and a Python package. It answers power electronics questions with verified results from 79 certified capabilities, gives 482 documented answers identically on Windows and Linux, and refuses rather than guesses when an answer cannot be verified.
 
-**power-electronics-ai999x** is a compact, deterministic power electronics engine for Python. It reads a question in plain English (or a typed call), picks a certified power electronics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions — or an honest refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
+**power-electronics-ai999x** reads a question in plain English (or a typed call), picks a certified power electronics capability, computes the answer exactly, checks it, and returns the result with its steps, units, LaTeX and assumptions, or a refusal that says what is missing. It runs fully offline on any CPU, needs no GPU, no API key and no internet, and is built to give **zero wrong answers**: when it is not sure, it refuses instead of guessing.
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support%20development-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/ibnuljaiffarabi) ![License](https://img.shields.io/badge/license-Apache--2.0-blue) ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue) ![Offline](https://img.shields.io/badge/runs-offline%20on%20CPU-green) ![Rust](https://img.shields.io/badge/Rust-Windows%20%7C%20Linux%20%7C%20WebAssembly-orange)
 
@@ -20,13 +20,13 @@ power-electronics-ai999x is an offline, deterministic Python solver that answers
 
 | Way to run it | For | Get it |
 |---|---|---|
-| **AI999X Power Electronics desktop app** 1.4.0 | Windows, Linux — this model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-power-electronics-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-power-electronics-1.4.0-linux-x86_64.tar.gz) |
-| **AI999X desktop app** 1.4.0 | Windows, Linux — every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-1.4.0-linux-x86_64.tar.gz) |
-| **Command line** (`power-electronics`) | Windows, Linux — one program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz) |
-| **In your browser** | any device — nothing to install | [Compute on the model page](https://www.ai999x.com/models/power-electronics-ai999x/#try) |
+| **AI999X Power Electronics desktop app** 1.5.0 | Windows, Linux. This model in its own app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-power-electronics-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-power-electronics-1.5.0-linux-x86_64.tar.gz) |
+| **AI999X desktop app** 1.5.0 | Windows, Linux. Every AI999X model in one app: search, ask in words, forms, live figures, explanations, offline | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-1.5.0-linux-x86_64.tar.gz) |
+| **Command line** (`power-electronics`) | Windows, Linux. One program per model, offline, no Python | [Windows (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-windows-x86_64.zip) · [Linux (x86-64)](https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz) |
+| **In your browser** | any device. Nothing to install | [Compute on the model page](https://www.ai999x.com/models/power-electronics-ai999x/#try) |
 | **Python** | Python 3.10+ | `pip install power-electronics-ai999x` |
 
-Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
+Checksums: [SHA256SUMS](https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS) · every version: [https://downloads.ai999x.com/desktop/latest/](https://downloads.ai999x.com/desktop/latest/) · install guide: [desktop & command line](https://www.ai999x.com/desktop-cli/)
 
 ## Quick start
 
@@ -37,11 +37,11 @@ Download **AI999X Power Electronics** for your system (above), unpack it and sta
 Linux, from a terminal:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-power-electronics-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-power-electronics-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-tar xzf ai999x-power-electronics-1.4.0-linux-x86_64.tar.gz
-./ai999x-power-electronics-1.4.0-linux-x86_64/ai999x-power-electronics
+tar xzf ai999x-power-electronics-1.5.0-linux-x86_64.tar.gz
+./ai999x-power-electronics-1.5.0-linux-x86_64/ai999x-power-electronics
 ```
 
 ### Command line
@@ -49,30 +49,30 @@ tar xzf ai999x-power-electronics-1.4.0-linux-x86_64.tar.gz
 Linux:
 
 ```bash
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/ai999x-cli-1.4.0-linux-x86_64.tar.gz
-curl -LO https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/ai999x-cli-1.5.0-linux-x86_64.tar.gz
+curl -LO https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS
 sha256sum -c --ignore-missing SHA256SUMS
-mkdir -p ~/.local/share && tar xzf ai999x-cli-1.4.0-linux-x86_64.tar.gz -C ~/.local/share
-echo 'export PATH="$HOME/.local/share/ai999x-cli-1.4.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
+mkdir -p ~/.local/share && tar xzf ai999x-cli-1.5.0-linux-x86_64.tar.gz -C ~/.local/share
+echo 'export PATH="$HOME/.local/share/ai999x-cli-1.5.0-linux-x86_64:$PATH"' >> ~/.bashrc && source ~/.bashrc
 power-electronics --version
 ```
 
 Windows (PowerShell):
 
 ```powershell
-$F = "ai999x-cli-1.4.0-windows-x86_64.zip"
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/$F" -OutFile $F
-Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.4.0/SHA256SUMS" -OutFile SHA256SUMS
+$F = "ai999x-cli-1.5.0-windows-x86_64.zip"
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/$F" -OutFile $F
+Invoke-WebRequest "https://downloads.ai999x.com/desktop/1.5.0/SHA256SUMS" -OutFile SHA256SUMS
 (Get-FileHash $F -Algorithm SHA256).Hash.ToLower() -eq ((Select-String -SimpleMatch $F SHA256SUMS).Line -split ' ')[0]
 Expand-Archive $F -DestinationPath "$env:LOCALAPPDATA\AI999X" -Force
-$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.4.0-windows-x86_64"; $env:Path += ";$D"
+$D = "$env:LOCALAPPDATA\AI999X\ai999x-cli-1.5.0-windows-x86_64"; $env:Path += ";$D"
 [Environment]::SetEnvironmentVariable("Path", [Environment]::GetEnvironmentVariable("Path", "User") + ";$D", "User")
 power-electronics --version
 ```
 
 Every command below was run as shown; the text under it is what the program printed.
 
-**Ask in words** — Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
+**Ask in words**: Write the question as you would say it: the program reads the quantities and their units, picks the capability and answers.
 
 ```console
 $ power-electronics ask "Buck converter in CCM: Vin = 24 V, Vout = 5 V, L = 22 uH, fs = 200 kHz, Io = 3 A"
@@ -92,7 +92,7 @@ Iin = 0.625 A
   assumes: 0 < Vout < Vin; continuous conduction (IL_min > 0)
 ```
 
-**What a capability needs** — The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
+**What a capability needs**: The equation or method, every input and output with its SI unit. Read this before solve: it tells you the input names.
 
 ```console
 $ power-electronics info pe_buck_ccm
@@ -111,7 +111,7 @@ Buck converter in continuous conduction
   out  Iin      average input current [A]
 ```
 
-**Solve** — Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
+**Solve**: Inputs as name=value, each with any unit of the right kind. The answer lists every output, the method used, each input converted to SI, and the conditions the answer assumes.
 
 ```console
 $ power-electronics solve pe_buck_ccm "Vin=24 V" "Vout=5 V" "L=22 uH" "fs=200 kHz" "Io=3 A"
@@ -130,7 +130,7 @@ Iin = 0.625 A
   assumes: 0 < Vout < Vin; continuous conduction (IL_min > 0)
 ```
 
-**Many questions at once** — One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | power-electronics batch
+**Many questions at once**: One JSON request per line in, one JSON answer per line out, in order: for scripts, notebooks and agents (the program starts once). In PowerShell: Get-Content cases.jsonl | power-electronics batch
 
 `cases.jsonl`:
 
@@ -195,6 +195,8 @@ print(a.values or (a.value, a.unit))
 
 Browser: [open this capability on the model page](https://www.ai999x.com/models/power-electronics-ai999x/#cap-pe_converter_small_signal) and press **Compute in your browser**.
 
+_What this means:_ This calculation determines the dynamic response characteristics of an ideal DC-DC converter operating in continuous conduction mode. Using the input voltage 12 V, duty cycle 0.5, inductance 50 uH, capacitance 100 uF, and load resistance 10 ohm, it computes the small-signal transfer function parameters. The result includes the DC gain 48 V, which represents the steady-state change in output voltage per unit change in duty cycle. The double-pole frequency 1125.4 Hz indicates where the magnitude begins to roll off at forty decibels per decade, while the quality factor 7.07107 describes the sharpness of the resonance peak near this frequency. If applicable, the right-half-plane zero frequency 7957.75 Hz is also calculated, marking a critical point for stability analysis.
+
 ### Peak current mode: subharmonic stability and slope compensation
 
 The inductor current slopes, the period-to-period perturbation factor, the stability verdict and the smallest and the deadbeat compensation ramp slopes of a peak-current-mode buck converter.
@@ -230,6 +232,8 @@ print(a.values or (a.value, a.unit))
 
 Browser: [open this capability on the model page](https://www.ai999x.com/models/power-electronics-ai999x/#cap-pe_peak_current_mode_slope) and press **Compute in your browser**.
 
+_What this means:_ This calculation determines the stability of a peak-current-mode buck converter by analyzing the inductor current slopes. The rising slope 400000 A/s and falling slope 800000 A/s are derived from the input voltage, output voltage, and inductance. These values feed into the perturbation factor formula to yield -0.714286. If the magnitude of this factor is less than one, the loop is stable; otherwise, subharmonic oscillations occur. The minimum compensation ramp required for stability at this operating point is 200000 A/s, while the deadbeat slope that eliminates ringing entirely is 800000 A/s.
+
 ### Boost converter in continuous conduction
 
 The duty cycle, average inductor (input) current, inductor ripple, peak and valley currents and switch voltage stress of an ideal boost (step-up) converter in continuous conduction.
@@ -263,6 +267,8 @@ print(a.values or (a.value, a.unit))
 ```
 
 Browser: [open this capability on the model page](https://www.ai999x.com/models/power-electronics-ai999x/#cap-pe_boost_ccm) and press **Compute in your browser**.
+
+_What this means:_ This calculation determines the operating parameters for an ideal boost converter in continuous conduction mode. The duty cycle, computed as 0.75, dictates the voltage conversion ratio based on the input and output voltages. From this, the average inductor current, which equals the input current, is found to be 4 A. The peak-to-peak inductor ripple current is calculated as 0.9 A, derived from the input voltage, duty cycle, inductance, and switching frequency. These values define the steady-state behavior of the converter.
 
 ### Boost converter in discontinuous conduction
 
@@ -300,18 +306,18 @@ Browser: [open this capability on the model page](https://www.ai999x.com/models/
 
 ## Documentation
 
-- **Rust user guide** — the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/power-electronics-ai999x/blob/main/docs/power_electronics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/power-electronics-ai999x/blob/main/docs/power_electronics_ai999x_rust_guide.md)
-- **Python guide** — every capability with a Python example: [PDF](https://huggingface.co/AI999X/power-electronics-ai999x/blob/main/docs/power_electronics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/power-electronics-ai999x/blob/main/docs/power_electronics_ai999x_capabilities.md)
-- **Desktop app & command line** — downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
-- **Model page** — compute in your browser, every capability explained: https://www.ai999x.com/models/power-electronics-ai999x/
+- **Rust user guide**: the command line, every capability with a command and what it printed: [PDF](https://huggingface.co/AI999X/power-electronics-ai999x/blob/main/docs/power_electronics_ai999x_rust_guide.pdf) · [Markdown](https://huggingface.co/AI999X/power-electronics-ai999x/blob/main/docs/power_electronics_ai999x_rust_guide.md)
+- **Python guide**: every capability with a Python example: [PDF](https://huggingface.co/AI999X/power-electronics-ai999x/blob/main/docs/power_electronics_ai999x_capabilities.pdf) · [Markdown](https://huggingface.co/AI999X/power-electronics-ai999x/blob/main/docs/power_electronics_ai999x_capabilities.md)
+- **Desktop app & command line**: downloads, install, ask and search, figures, offline use, checksums: https://www.ai999x.com/desktop-cli/
+- **Model page**: compute in your browser, every capability explained: https://www.ai999x.com/models/power-electronics-ai999x/
 
 ## Highlights
 
 - **Verified, not generated.** Every answer is computed by a certified power electronics capability and checked (substituted back, dimension-checked or compared with an independent computation) before it is returned.
-- **Zero wrong answers by design.** Seven explicit outcomes — SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR — never a silent guess. Every one of its 482 documented answers is reproduced exactly on every tested platform.
+- **Zero wrong answers by design.** Seven explicit outcomes (SOLVED, NEEDS_INPUT, AMBIGUOUS, INVALID_INPUT, OUT_OF_SCOPE, UNRECOGNIZED_FORMAT, INTERNAL_ERROR), never a silent guess. Every one of its 482 documented answers is reproduced exactly on every tested platform.
 - **Plain-English questions and a guaranteed typed interface.** `ask()` reads documented question forms; `solve(capability_id, **inputs)` always solves a supported task with valid inputs.
 - **Explains itself.** Steps, formulas in LaTeX, units, assumptions and the model used, ready for notebooks, tutoring apps and homework checkers.
-- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `power-electronics` command line for Windows and Linux, and WebAssembly on the model page — no Python, no network.
+- **Native and in the browser.** Every capability also computes natively in Rust: the desktop app and the `power-electronics` command line for Windows and Linux, and WebAssembly on the model page, no Python, no network.
 - **Small and portable.** Pure Python (sympy, mpmath); identical answers on Windows and Linux (Python 3.10, 3.11, 3.12, 3.13, 3.14).
 - **Coverage:** DC-DC converters, rectifiers, inverters and PWM, motor drives, device losses, thermal and magnetic design, resonant converters.
 
@@ -319,7 +325,7 @@ Browser: [open this capability on the model page](https://www.ai999x.com/models/
 
 | Property | Value |
 |---|---|
-| Package | `power-electronics-ai999x` 1.1.0 (import `power_electronics_ai999x`) |
+| Package | `power-electronics-ai999x` 1.5.0 (import `power_electronics_ai999x`) |
 | Type | Deterministic neuro-symbolic power electronics engine (rule-based reading + certified symbolic capabilities) |
 | Capabilities | 79 certified procedures |
 | Knowledge pack | version 1.0.0 |
@@ -353,14 +359,14 @@ power_electronics.ask("Who created you?").message
 # -> power-electronics-ai999x was created and engineered by Ibnul Jaif Farabi at AI999X.
 ```
 
-The Python package also installs a Python command, `power-electronics-ai999x "<question>"`; for the native program use `power-electronics` (above). The outputs above were produced by running this exact code on power-electronics-ai999x 1.1.0.
+The Python package also installs a Python command, `power-electronics-ai999x "<question>"`; for the native program use `power-electronics` (above). The outputs above were produced by running this exact code on power-electronics-ai999x 1.5.0.
 
 ## How every answer is verified
 
-1. **Reading** — the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
-2. **Planning** — only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
-3. **Computing** — exact symbolic or high-precision numeric evaluation.
-4. **Checking** — dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
+1. **Reading**: the question is turned into typed quantities (value, unit, kind, role) and one asked quantity; every stated number must be used or the question is refused.
+2. **Planning**: only certified capabilities may answer; a capability applies only under the conditions the wording states (for example a pendulum, a liquid at rest, boiling).
+3. **Computing**: exact symbolic or high-precision numeric evaluation.
+4. **Checking**: dimensions, substitution back into the defining equation, and agreement between independent readings; any disagreement becomes a refusal, never a number.
 
 Capabilities are certified before they ship: each must reproduce hand-worked reference cases, reject a deliberately wrong variant (a control), and leave every benchmark answer unchanged.
 
@@ -446,25 +452,25 @@ Every point was computed by `power-electronics-ai999x`.
 
 **Buck converter in continuous conduction**
 
-![Buck converter in continuous conduction — computed by power-electronics-ai999x](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-buck-ccm-dil-vs-vin.svg)
+![Buck converter in continuous conduction, computed by power-electronics-ai999x](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-buck-ccm-dil-vs-vin.svg)
 
 _dIL (peak-to-peak inductor ripple) against Vin (input voltage), with Io = 3 A, L = 2.20e-5 H, Vout = 5 V, fs = 2.00e5 Hz. 31 points computed by power-electronics-ai999x; marked: Vin = 24, dIL = 0.899621 A._
 
 **Boost power-factor-correction stage**
 
-![Boost power-factor-correction stage — computed by power-electronics-ai999x](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-boost-pfc-di-max-vs-vac.svg)
+![Boost power-factor-correction stage, computed by power-electronics-ai999x](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-boost-pfc-di-max-vs-vac.svg)
 
 _dI_max (largest inductor ripple over the line cycle) against Vac (RMS line voltage), with C = 3.30e-4 F, L = 5.00e-4 H, Po = 500 W, Vo = 400 V, eff = 0.95, f_line = 50 Hz, fs = 65000 Hz. 22 points computed by power-electronics-ai999x; marked: Vac = 230, dI_max = 3.07692 A._
 
 **Flyback converter in continuous conduction**
 
-![Flyback converter in continuous conduction — computed by power-electronics-ai999x](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-flyback-ccm-d-vs-vin.svg)
+![Flyback converter in continuous conduction, computed by power-electronics-ai999x](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-flyback-ccm-d-vs-vin.svg)
 
 _D (duty cycle) against Vin (input voltage), with Io = 2 A, Lm = 2.00e-4 H, Vout = 12 V, fs = 1.00e5 Hz, n = 2. 31 points computed by power-electronics-ai999x; marked: Vin = 48, D = 0.333333._
 
 **Peak current mode: subharmonic stability and slope compensation**
 
-![Peak current mode: subharmonic stability and slope compensation — computed by power-electronics-ai999x](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-peak-current-mode-slope-alpha-vs-vin.svg)
+![Peak current mode: subharmonic stability and slope compensation, computed by power-electronics-ai999x](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-peak-current-mode-slope-alpha-vs-vin.svg)
 
 _alpha (perturbation factor per switching period) against Vin (input voltage), with L = 1.00e-5 H, Vout = 8 V, fs = 3.00e5 Hz, ma = 3.00e5 A/s. 25 points computed by power-electronics-ai999x; marked: Vin = 12, alpha = -0.714286._
 
@@ -479,22 +485,22 @@ _alpha (perturbation factor per switching period) against Vin (input voltage), w
 ## Out of scope
 
 - Open-ended explanation, essay writing or tutoring dialogue: it is a solver, not a chatbot.
-- Questions outside its certified power electronics capabilities, and any question whose stated numbers it cannot all use — it refuses with the reason instead.
+- Questions outside its certified power electronics capabilities, and any question whose stated numbers it cannot all use: it refuses with the reason instead.
 - High-stakes engineering, medical or legal decisions without independent review.
 
 ## Limitations
 
 - It answers what its certified capabilities cover (DC-DC converters, rectifiers, inverters and PWM, motor drives, device losses, thermal and magnetic design, resonant converters); anything else is refused with a reason.
-- `ask()` reads documented question forms and common phrasings; unusual wording may be refused — use `solve()` for guaranteed results.
+- `ask()` reads documented question forms and common phrasings; unusual wording may be refused; use `solve()` for guaranteed results.
 - Results are as correct as the certified relations and their stated conditions; a certified relation is a checked model, not a claim about every physical situation.
 
 ## Citation
 
 ```bibtex
-@software{power_electronics_ai999x_1_1_0,
+@software{power_electronics_ai999x_1_5_0,
   title  = {power-electronics-ai999x: an offline, verified power electronics solver},
   author = {Farabi, Ibnul Jaif}, organization = {AI999X},
-  year   = {2026}, version = {1.1.0},
+  year   = {2026}, version = {1.5.0},
   url    = {https://huggingface.co/AI999X/power-electronics-ai999x}
 }
 ```
@@ -511,4 +517,15 @@ Created and engineered by **Ibnul Jaif Farabi** · **[AI999X](https://huggingfac
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/power-electronics-ai999x/) (`pip install .` builds it). Releases are tagged `v<version>`; the wheel is attached to each [GitHub release](https://github.com/AI999X/power-electronics-ai999x/releases). The optional ONNX models (formula graphs and, where measured, a decision model) are on [Hugging Face](https://huggingface.co/AI999X/power-electronics-ai999x/tree/main/onnx).
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/power-electronics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.5.0`; the [GitHub release](https://github.com/AI999X/power-electronics-ai999x/releases/tag/v1.5.0) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+
+## Build the program from source
+
+`rust/` holds the Rust source of the `power-electronics` command-line program and browser module: the AI999X engine (`rust/ax-engine`), this model (`rust/power-electronics`) and its data (`rust/models/power_electronics/pack.json`). With Rust 1.80 or later:
+
+```bash
+cd rust
+cargo build --release -p power-electronics-ai999x
+./target/release/power-electronics --help
+cargo test -p power-electronics-ai999x
+```
