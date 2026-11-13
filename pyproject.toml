@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "power-electronics-ai999x"
-version = "1.5.0"
+version = "1.6.0"
 description = "Offline power electronics solver: DC-DC converters in continuous and discontinuous conduction (buck, boost, buck-boost, Cuk, SEPIC, flyback, forward, bridge), rectifiers and phase control, inverters and PWM, motor drives, device losses, snubbers, thermal and magnetic design, resonant converters, with steps, LaTeX and honest refusals"
 readme = "README.md"
 requires-python = ">=3.10"
