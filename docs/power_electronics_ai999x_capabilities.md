@@ -292,7 +292,7 @@ $$
 
 ![dIL (peak-to-peak inductor ripple) against Vin (input voltage) from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-ccm-curve)
 
-*dIL (peak-to-peak inductor ripple) against Vin (input voltage) from 1.2 V to 120 V on a logarithmic axis. One curve for each value of L (inductance): 0.0001 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Vout = 48.0 V, fs = 100000.0 Hz, Io = 1.0 A. 33 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 12 V, dIL = 0.9 A.*
+*dIL (peak-to-peak inductor ripple) against Vin (input voltage) from 1.2 V to 120 V on a logarithmic axis. One curve for each value of L (inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Vout = 48.0 V, fs = 100000.0 Hz, Io = 1.0 A. 33 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 12 V, dIL = 0.9 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_boost_ccm', Vin=12.0, Vout=48.0, L=0.0001, fs=100000.0, Io=1.0)
@@ -448,7 +448,7 @@ $$
 
 ![dVo (peak-to-peak output ripple) against Vout (output voltage) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-output-ripple-curve)
 
-*dVo (peak-to-peak output ripple) against Vout (output voltage) from 0.5 V to 50 V on a logarithmic axis. One curve for each value of fs (switching frequency): 200000 Hz, 100000 Hz, 400000 Hz. Other inputs as in the worked example: Vin = 24.0 V, L = 2.2e-05 H, C = 0.0001 F. 34 points per curve computed by power-electronics-ai999x; marked: the worked example, Vout = 5 V, dVo = 0.00562263 V.*
+*dVo (peak-to-peak output ripple) against Vout (output voltage) from 0.5 V to 50 V on a logarithmic axis. One curve for each value of fs (switching frequency): 200000 Hz, 100000 Hz, 400000 Hz. Other inputs as in the worked example: Vin = 24.0 V, L = 2.2e-05 H, C = 9.999999999999999e-05 F. 34 points per curve computed by power-electronics-ai999x; marked: the worked example, Vout = 5 V, dVo = 0.00562263 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_output_ripple', Vin=24.0, Vout=5.0, L=2.2e-05, C=0.0001, fs=200000.0)
@@ -556,7 +556,7 @@ $$
 
 ![dIL1 (input inductor ripple) against L1 (input inductance) from 5](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-cuk-ccm-curve)
 
-*dIL1 (input inductor ripple) against L1 (input inductance) from 5.0000e-05 H to 0.00015 H. One curve for each value of fs (switching frequency): 100000 Hz, 50000 Hz, 200000 Hz. Other inputs as in the worked example: Vin = 12.0 V, Vout = 15.0 V, L2 = 0.0001 H, C1 = 1e-05 F, Io = 1.0 A. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L1 = 0.0001 H, dIL1 = 0.666667 A.*
+*dIL1 (input inductor ripple) against L1 (input inductance) from 5.0000e-05 H to 0.00015 H. One curve for each value of fs (switching frequency): 100000 Hz, 50000 Hz, 200000 Hz. Other inputs as in the worked example: Vin = 12.0 V, Vout = 15.0 V, L2 = 9.999999999999999e-05 H, C1 = 9.999999999999999e-06 F, Io = 1.0 A. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L1 = 1.0000e-04 H, dIL1 = 0.666667 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_cuk_ccm', Vin=12.0, Vout=15.0, L1=0.0001, L2=0.0001, C1=1e-05, fs=100000.0, Io=1.0)
@@ -614,7 +614,7 @@ $$
 
 ![dIL1 (input inductor ripple) against L1 (input inductance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-sepic-ccm-curve)
 
-*dIL1 (input inductor ripple) against L1 (input inductance) from 2.3500e-05 H to 7.0500e-05 H. One curve for each value of fs (switching frequency): 200000 Hz, 100000 Hz, 400000 Hz. Other inputs as in the worked example: Vin = 9.0 V, Vout = 12.0 V, L2 = 4.7e-05 H, C1 = 1e-05 F, Io = 1.0 A. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L1 = 4.7000e-05 H, dIL1 = 0.547112 A.*
+*dIL1 (input inductor ripple) against L1 (input inductance) from 2.3500e-05 H to 7.0500e-05 H. One curve for each value of fs (switching frequency): 200000 Hz, 100000 Hz, 400000 Hz. Other inputs as in the worked example: Vin = 9.0 V, Vout = 12.0 V, L2 = 4.7e-05 H, C1 = 9.999999999999999e-06 F, Io = 1.0 A. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L1 = 4.7000e-05 H, dIL1 = 0.547112 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_sepic_ccm', Vin=9.0, Vout=12.0, L1=4.7e-05, L2=4.7e-05, C1=1e-05, fs=200000.0, Io=1.0)
@@ -674,7 +674,7 @@ $$
 
 ![D (duty cycle) against Vin (input voltage) from 4](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-flyback-ccm-curve)
 
-*D (duty cycle) against Vin (input voltage) from 4.8 V to 480 V on a logarithmic axis. One curve for each value of Vout (output voltage): 12 V, 6 V, 24 V. Other inputs as in the worked example: n = 2.0, Lm = 0.0002 H, fs = 100000.0 Hz, Io = 2.0 A. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 48 V, D = 0.333333.*
+*D (duty cycle) against Vin (input voltage) from 4.8 V to 480 V on a logarithmic axis. One curve for each value of Vout (output voltage): 12 V, 6 V, 24 V. Other inputs as in the worked example: n = 2.0, Lm = 0.00019999999999999998 H, fs = 100000.0 Hz, Io = 2.0 A. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 48 V, D = 0.333333.*
 
 ```python
 power_electronics_ai999x.solve('pe_flyback_ccm', Vin=48.0, Vout=12.0, n=2.0, Lm=0.0002, fs=100000.0, Io=2.0)
@@ -785,7 +785,7 @@ $$
 
 ![D (duty cycle of each switch) against Vin (input voltage) from 200 V to 600 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bridge-converter-curve)
 
-*D (duty cycle of each switch) against Vin (input voltage) from 200 V to 600 V. One curve for each value of Vout (output voltage): 48 V, 24 V, 96 V. Other inputs as in the worked example: topology = full-bridge, n = 5.0, L = 5e-05 H, fs = 100000.0 Hz, Io = 10.0 A. 27 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 400 V, D = 0.3.*
+*D (duty cycle of each switch) against Vin (input voltage) from 200 V to 600 V. One curve for each value of Vout (output voltage): 48 V, 24 V, 96 V. Other inputs as in the worked example: topology = full-bridge, n = 5.0, L = 4.9999999999999996e-05 H, fs = 100000.0 Hz, Io = 10.0 A. 27 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 400 V, D = 0.3.*
 
 ```python
 power_electronics_ai999x.solve('pe_bridge_converter', topology='full-bridge', Vin=400.0, Vout=48.0, n=5.0, L=5e-05, fs=100000.0, Io=10.0)
@@ -1382,7 +1382,7 @@ $$
 
 ![f0 (double-pole (corner) frequency) against L (inductance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-converter-small-signal-curve)
 
-*f0 (double-pole (corner) frequency) against L (inductance) from 2.5000e-05 H to 7.5000e-05 H. One curve for each value of C (output capacitance): 0.0001 F, 5.0000e-05 F, 0.0002 F. Other inputs as in the worked example: topology = boost, Vin = 12.0 V, D = 0.5, R = 10.0 ohm. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 5.0000e-05 H, f0 = 1125.4 Hz.*
+*f0 (double-pole (corner) frequency) against L (inductance) from 2.5000e-05 H to 7.5000e-05 H. One curve for each value of C (output capacitance): 1.0000e-04 F, 5.0000e-05 F, 0.0002 F. Other inputs as in the worked example: topology = boost, Vin = 12.0 V, D = 0.5, R = 10.0 ohm. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 5.0000e-05 H, f0 = 1125.4 Hz.*
 
 ```python
 power_electronics_ai999x.solve('pe_converter_small_signal', topology='boost', Vin=12.0, D=0.5, L=5e-05, C=0.0001, R=10.0)
@@ -1441,7 +1441,7 @@ $$
 
 ![stable or unstable (stable) over Vin (input voltage) from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-peak-current-mode-slope-decision)
 
-*stable or unstable (stable) over Vin (input voltage) from 1.2 V to 120 V and Vout (output voltage) from 0.8 V to 80 V (logarithmic axes): each of the 31 × 21 cells is one run of power-electronics-ai999x, coloured by the verdict it returned, stable: 341 cells, unstable: 39 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: L = 1e-05 H, fs = 300000.0 Hz, ma = 300000.0 A/s. Marked: the worked example, Vin = 12 V, Vout = 8 V → stable.*
+*stable or unstable (stable) over Vin (input voltage) from 1.2 V to 120 V and Vout (output voltage) from 0.8 V to 80 V (logarithmic axes): each of the 31 × 21 cells is one run of power-electronics-ai999x, coloured by the verdict it returned, stable: 341 cells, unstable: 39 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: L = 9.999999999999999e-06 H, fs = 300000.0 Hz, ma = 300000.0 A/s. Marked: the worked example, Vin = 12 V, Vout = 8 V → stable.*
 
 ![alpha (perturbation factor per switching period) against Vout (output voltage) from 4 V to 12 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-peak-current-mode-slope-curve)
 
@@ -1929,7 +1929,7 @@ $$
 
 ![dV (peak-to-peak ripple) against f (line frequency) from 6 Hz to 600 Hz on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-capacitor-filter-exact-curve)
 
-*dV (peak-to-peak ripple) against f (line frequency) from 6 Hz to 600 Hz on a logarithmic axis. One curve for each value of Vp (peak source voltage (after any diode drop)): 169.7 V, 84.85 V, 339.4 V. Other inputs as in the worked example: circuit = half-wave, R = 500.0 ohm, C = 0.0001 F. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 60 Hz, dV = 43.1319 V.*
+*dV (peak-to-peak ripple) against f (line frequency) from 6 Hz to 600 Hz on a logarithmic axis. One curve for each value of Vp (peak source voltage (after any diode drop)): 169.7 V, 84.85 V, 339.4 V. Other inputs as in the worked example: circuit = half-wave, R = 500.0 ohm, C = 9.999999999999999e-05 F. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 60 Hz, dV = 43.1319 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_capacitor_filter_exact', circuit='half-wave', Vp=169.7, f=60.0, R=500.0, C=0.0001)
@@ -3211,7 +3211,7 @@ $$
 
 ![P_sw (switching loss) against V (blocking (dc bus) voltage) from 200 V to 600 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-switching-loss-curve)
 
-*P_sw (switching loss) against V (blocking (dc bus) voltage) from 200 V to 600 V. One curve for each value of I (switched current): 10 A, 5 A, 20 A. Other inputs as in the worked example: tr = 3e-08 s, tf = 5e-08 s, fs = 100000.0 Hz, Coss = 1e-10 F. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, V = 400 V, P_sw = 16 W.*
+*P_sw (switching loss) against V (blocking (dc bus) voltage) from 200 V to 600 V. One curve for each value of I (switched current): 10 A, 5 A, 20 A. Other inputs as in the worked example: tr = 3.0000000000000004e-08 s, tf = 5.0000000000000004e-08 s, fs = 100000.0 Hz, Coss = 1e-10 F. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, V = 400 V, P_sw = 16 W.*
 
 ```python
 power_electronics_ai999x.solve('pe_switching_loss', V=400.0, I=10.0, tr=3e-08, tf=5e-08, fs=100000.0, Coss=1e-10)
@@ -3422,7 +3422,7 @@ $$
 
 ![C_min (smallest bootstrap capacitance) against dV (allowed bootstrap droop) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bootstrap-capacitor-curve)
 
-*C_min (smallest bootstrap capacitance) against dV (allowed bootstrap droop) from 0.25 V to 0.75 V. One curve for each value of Qg (high-side gate charge): 6.0000e-08 C, 3.0000e-08 C, 1.2000e-07 C. Other inputs as in the worked example: Ileak = 0.0002 A, fs = 100000.0 Hz, Dmax = 0.9. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, dV = 0.5 V, C_min = 1.2360e-07 F.*
+*C_min (smallest bootstrap capacitance) against dV (allowed bootstrap droop) from 0.25 V to 0.75 V. One curve for each value of Qg (high-side gate charge): 6.0000e-08 C, 3.0000e-08 C, 1.2000e-07 C. Other inputs as in the worked example: Ileak = 0.00019999999999999998 A, fs = 100000.0 Hz, Dmax = 0.9. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, dV = 0.5 V, C_min = 1.2360e-07 F.*
 
 ```python
 power_electronics_ai999x.solve('pe_bootstrap_capacitor', Qg=6e-08, Ileak=0.0002, fs=100000.0, Dmax=0.9, dV=0.5)
@@ -3476,7 +3476,7 @@ $$
 
 ![Cs (snubber capacitance) against V (bus voltage) from 150 V to 450 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-turnoff-snubber-curve)
 
-*Cs (snubber capacitance) against V (bus voltage) from 150 V to 450 V. One curve for each value of I (switched (load) current): 10 A, 5 A, 20 A. Other inputs as in the worked example: tf = 1e-07 s, fs = 50000.0 Hz. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, V = 300 V, Cs = 1.6667e-09 F.*
+*Cs (snubber capacitance) against V (bus voltage) from 150 V to 450 V. One curve for each value of I (switched (load) current): 10 A, 5 A, 20 A. Other inputs as in the worked example: tf = 1.0000000000000001e-07 s, fs = 50000.0 Hz. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, V = 300 V, Cs = 1.6667e-09 F.*
 
 ```python
 power_electronics_ai999x.solve('pe_turnoff_snubber', I=10.0, V=300.0, tf=1e-07, fs=50000.0)
@@ -3585,7 +3585,7 @@ $$
 
 ![achieved or not achieved (zvs) over Vin (voltage the node must swing) from 40 V to 4000 V and Ceq (total node capacitance) from 4](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-zvs-transition-decision)
 
-*achieved or not achieved (zvs) over Vin (voltage the node must swing) from 40 V to 4000 V and Ceq (total node capacitance) from 4.0000e-11 F to 4.0000e-09 F (logarithmic axes): each of the 31 × 21 cells is one run of power-electronics-ai999x, coloured by the verdict it returned, achieved: 396 cells, not achieved: 255 cells. Other inputs as in the worked example: L = 2e-05 H, I0 = 3.0 A. Marked: the worked example, Vin = 400 V, Ceq = 4.0000e-10 F → achieved.*
+*achieved or not achieved (zvs) over Vin (voltage the node must swing) from 40 V to 4000 V and Ceq (total node capacitance) from 4.0000e-11 F to 4.0000e-09 F (logarithmic axes): each of the 31 × 21 cells is one run of power-electronics-ai999x, coloured by the verdict it returned, achieved: 396 cells, not achieved: 255 cells. Other inputs as in the worked example: L = 1.9999999999999998e-05 H, I0 = 3.0 A. Marked: the worked example, Vin = 400 V, Ceq = 4.0000e-10 F → achieved.*
 
 ![t_transition (time to reach Vin (or to the voltage peak when ZVS fails)) against L (resonant (leakage) inductance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-zvs-transition-curve)
 
@@ -3863,7 +3863,7 @@ $$
 
 ![N (turns (before rounding)) against Bmax (peak flux density allowed) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-gapped-inductor-design-curve)
 
-*N (turns (before rounding)) against Bmax (peak flux density allowed) from 0.15 T to 0.45 T. One curve for each value of L (inductance): 0.0001 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Ipk = 10.0 A, Ac = 0.0001 m^2. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Bmax = 0.3 T, N = 33.3333.*
+*N (turns (before rounding)) against Bmax (peak flux density allowed) from 0.15 T to 0.45 T. One curve for each value of L (inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Ipk = 10.0 A, Ac = 0.0001 m^2. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Bmax = 0.3 T, N = 33.3333.*
 
 ```python
 power_electronics_ai999x.solve('pe_gapped_inductor_design', L=0.0001, Ipk=10.0, Bmax=0.3, Ac=0.0001)
@@ -3914,7 +3914,7 @@ $$
 
 ![Ap (area product Ac Wa) against Ku (window utilisation factor (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-inductor-area-product-curve)
 
-*Ap (area product Ac Wa) against Ku (window utilisation factor (a fraction or %)) from 0.02 to 0.98. One curve for each value of L (inductance): 0.0001 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Ipk = 12.0 A, Irms = 10.0 A, Bmax = 0.3 T, J = 4000000.0 A/m^2. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, Ku = 0.4, Ap = 2.5000e-08 m^4.*
+*Ap (area product Ac Wa) against Ku (window utilisation factor (a fraction or %)) from 0.02 to 0.98. One curve for each value of L (inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Ipk = 12.0 A, Irms = 10.0 A, Bmax = 0.3 T, J = 4000000.0 A/m^2. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, Ku = 0.4, Ap = 2.5000e-08 m^4.*
 
 ```python
 power_electronics_ai999x.solve('pe_inductor_area_product', L=0.0001, Ipk=12.0, Irms=10.0, Bmax=0.3, J=4000000.0, Ku=0.4)
@@ -4020,7 +4020,7 @@ $$
 
 ![Pv (core loss density) against beta (flux-density exponent) from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-steinmetz-core-loss-curve)
 
-*Pv (core loss density) against beta (flux-density exponent) from 1.25 to 3.75. One curve for each value of alpha (frequency exponent): 1.4, 0.7, 2.8. Other inputs as in the worked example: k = 3.2, f = 100000.0 Hz, Bpk = 0.1 T, Vc = 5e-06 m^3. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, beta = 2.5, Pv = 101193 W/m^3.*
+*Pv (core loss density) against beta (flux-density exponent) from 1.25 to 3.75. One curve for each value of alpha (frequency exponent): 1.4, 0.7, 2.8. Other inputs as in the worked example: k = 3.2, f = 100000.0 Hz, Bpk = 0.1 T, Vc = 5.000000000000001e-06 m^3. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, beta = 2.5, Pv = 101193 W/m^3.*
 
 ```python
 power_electronics_ai999x.solve('pe_steinmetz_core_loss', k=3.2, alpha=1.4, beta=2.5, f=100000.0, Bpk=0.1, Vc=5e-06)
@@ -4074,7 +4074,7 @@ $$
 
 ![Pv (core loss density) against D (duty cycle of the rising flux (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-igse-triangular-core-loss-curve)
 
-*Pv (core loss density) against D (duty cycle of the rising flux (a fraction or %)) from 0.02 to 0.98. One curve for each value of alpha (frequency exponent): 1.4, 0.7, 2.8. Other inputs as in the worked example: k = 3.2, beta = 2.5, f = 100000.0 Hz, dB = 0.2 T, Vc = 5e-06 m^3. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, D = 0.5, Pv = 94324.8 W/m^3.*
+*Pv (core loss density) against D (duty cycle of the rising flux (a fraction or %)) from 0.02 to 0.98. One curve for each value of alpha (frequency exponent): 1.4, 0.7, 2.8. Other inputs as in the worked example: k = 3.2, beta = 2.5, f = 100000.0 Hz, dB = 0.2 T, Vc = 5.000000000000001e-06 m^3. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, D = 0.5, Pv = 94324.8 W/m^3.*
 
 ```python
 power_electronics_ai999x.solve('pe_igse_triangular_core_loss', k=3.2, alpha=1.4, beta=2.5, f=100000.0, dB=0.2, D=0.5, Vc=5e-06)
@@ -4228,7 +4228,7 @@ $$
 
 ![M (tank voltage gain) against f (switching frequency) from 12000 Hz to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-series-resonant-gain-curve)
 
-*M (tank voltage gain) against f (switching frequency) from 12000 Hz to 1.2e+06 Hz on a logarithmic axis. One curve for each value of Lr (resonant inductance): 0.0001 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Cr = 2.5e-08 F, R = 30.0 ohm. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 120000 Hz, M = 0.801964.*
+*M (tank voltage gain) against f (switching frequency) from 12000 Hz to 1.2e+06 Hz on a logarithmic axis. One curve for each value of Lr (resonant inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Cr = 2.5000000000000002e-08 F, R = 30.0 ohm. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 120000 Hz, M = 0.801964.*
 
 ```python
 power_electronics_ai999x.solve('pe_series_resonant_gain', Lr=0.0001, Cr=2.5e-08, R=30.0, f=120000.0)
@@ -4283,7 +4283,7 @@ $$
 
 ![M (tank voltage gain) against f (switching frequency) from 10000 Hz to 1e+06 Hz on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-llc-resonant-gain-curve)
 
-*M (tank voltage gain) against f (switching frequency) from 10000 Hz to 1e+06 Hz on a logarithmic axis. One curve for each value of Lm (magnetizing inductance): 0.0003 H, 0.00015 H, 0.0006 H. Other inputs as in the worked example: Lr = 6e-05 H, Cr = 2.7e-08 F, n = 8.0, R = 2.0 ohm. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 100000 Hz, M = 1.09817.*
+*M (tank voltage gain) against f (switching frequency) from 10000 Hz to 1e+06 Hz on a logarithmic axis. One curve for each value of Lm (magnetizing inductance): 0.0003 H, 0.00015 H, 0.0006 H. Other inputs as in the worked example: Lr = 5.9999999999999995e-05 H, Cr = 2.7e-08 F, n = 8.0, R = 2.0 ohm. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 100000 Hz, M = 1.09817.*
 
 ```python
 power_electronics_ai999x.solve('pe_llc_resonant_gain', Lr=6e-05, Cr=2.7e-08, Lm=0.0003, n=8.0, R=2.0, f=100000.0)
