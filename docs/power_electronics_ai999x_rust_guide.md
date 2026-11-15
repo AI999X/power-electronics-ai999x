@@ -1,6 +1,6 @@
 # power-electronics: the Power Electronics program, user guide
 
-**power-electronics-ai999x 1.6.0**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
+**power-electronics-ai999x 1.6.3**, Rust build: command line, desktop app and browser. **Creator / engineer:** Ibnul Jaif Farabi · **Company:** AI999X · support@ai999x.com
 
 Power Electronics covers DC-DC converters in continuous and discontinuous conduction (buck, boost, buck-boost, Cuk, SEPIC, flyback, forward, bridge), rectifiers and phase control, inverters and PWM, motor drives, device losses, snubbers, thermal and magnetic design and resonant converters. This guide is about `power-electronics`, the model as a self-contained program for Windows and Linux: 79 capabilities in 13 topics, answered on your own computer with no network, no Python and nothing else to install. The same compiled model runs in the AI999X desktop app and in the browser on the model's page (https://www.ai999x.com/models/power-electronics-ai999x/); the Python package (`pip install power-electronics-ai999x`) has its own guide. Every command output printed here is what the program printed.
 
@@ -96,7 +96,7 @@ Prints the model, its version and that this is the Rust build.
 
 ```shell
 $ power-electronics --version
-power-electronics-ai999x 1.6.0 (Rust build, ax-engine 1.6.0)
+power-electronics-ai999x 1.6.3 (Rust build, ax-engine 1.6.3)
 ```
 
 ### 2.2 Ask in words
