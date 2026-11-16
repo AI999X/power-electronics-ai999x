@@ -10,34 +10,99 @@ Power Electronics covers DC-DC converters in continuous and discontinuous conduc
 
 | | |
 |---|---|
-| **Desktop app** (Windows, Linux) | [Windows](https://downloads.ai999x.com/desktop/latest/ai999x-windows-x86_64.zip) · [Linux](https://downloads.ai999x.com/desktop/latest/ai999x-linux-x86_64.tar.gz) |
-| **Command line** `power-electronics` (Windows, Linux) | [Windows](https://downloads.ai999x.com/desktop/latest/ai999x-cli-windows-x86_64.zip) · [Linux](https://downloads.ai999x.com/desktop/latest/ai999x-cli-linux-x86_64.tar.gz) |
+| **Desktop app** (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-1.6.4-linux-x86_64.tar.gz) |
+| **Command line** `power-electronics` (Windows, Linux) | [Windows](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-windows-x86_64.zip) · [Linux](https://github.com/AI999X/ai999x-desktop/releases/download/v1.6.4/ai999x-cli-1.6.4-linux-x86_64.tar.gz) |
 | **Browser** (any device) | [Try it on the model page](https://www.ai999x.com/models/power-electronics-ai999x/#try) |
 | **Python** 3.10+ | `pip install power-electronics-ai999x`: on Windows and Linux (x86-64) `pip` installs the same compiled engine; on other systems (macOS, ARM) it installs a pure-Python build that gives the same answers |
 
-## Example
+## Ask in words: 8 examples
+
+Each question below was asked on this release; the comment under it is the line it printed.
 
 ```python
 import power_electronics_ai999x as power_electronics
-a = power_electronics.ask("Buck converter in CCM: Vin = 24 V, Vout = 5 V, L = 22 uH, fs = 200 kHz, Io = 3 A")
-print(a.outcome, a.value, a.unit)
+
+a = power_electronics.ask(
+    "Single-phase commutation overlap: Vs = 230 V, f = 0.05 kHz, Ls = "
+    "2 mH, Id = 20 A, alpha = 30 deg"
+)
+print(a.outcome, a.values)
+# SOLVED {'u_deg': 7.93041601856, 'Vdc': 171.330264284, 'dV': 8.0}
+
+a = power_electronics.ask(
+    "Boost converter output ripple: Vin = 12 V, Vout = 48 V, Io = 1 A, "
+    "C = 47 uF, fs = 100 kHz"
+)
+print(a.outcome, a.values)
+# SOLVED {'D': 0.75, 'dVo': 0.159574468085, 'dVo_pct': 0.332446808511}
+
+a = power_electronics.ask(
+    "Three-phase commutation overlap: VLL = 400 V, f = 0.05 kHz, Ls = "
+    "0.5 mH, Id = 100 A, alpha = 30 deg"
+)
+print(a.outcome, a.values)
+# SOLVED {'u_deg': 5.85622851056, 'Vdc': 452.81808074, 'dV': 15.0}
+
+a = power_electronics.ask(
+    "Inductor area product: L = 100 uH, Ipk = 12 A, Irms = 10 A, Bmax "
+    "= 300 mT, J = 4 A/mm^2, Ku = 0.4"
+)
+print(a.outcome, a.values)
+# SOLVED {'Ap': 2.5e-08, 'Ap_cm4': 2.5}
+
+a = power_electronics.ask(
+    "MOSFET conduction loss: Rds25 = 0.01 ohm, alpha = 0.007, Tj = 125 "
+    "degC, Irms = 20 A"
+)
+print(a.outcome, a.values)
+# SOLVED {'Rds_T': 0.017, 'P': 6.8, 'P_25': 4.0, 'ratio': 1.7}
+
+a = power_electronics.ask(
+    "Transformer turns: waveform = square, V = 48 V, f = 100 kHz, Bmax "
+    "= 150 mT, Ac = 1.25 cm^2, Vs = 12 V"
+)
+print(a.outcome, a.values)
+# SOLVED {'Np': 6.4, 'Ns': 1.6, 'n': 4.0, 'volts_per_turn': 7.5}
+
+a = power_electronics.ask(
+    "Critical inductance: topology = buck, Vin = 24 V, Vout = 12 V, fs "
+    "= 100 kHz, R = 10 ohm"
+)
+print(a.outcome, a.values)
+# SOLVED {'D': 0.5, 'L_crit': 2.5e-05, 'Io': 1.2}
+
+a = power_electronics.ask(
+    "DC-DC conversion ratio: topology = boost, Vin = 12 V, D = 0.6"
+)
+print(a.outcome, a.values)
+# SOLVED {'M': 2.5, 'Vout': 30.0, 'polarity': 'same'}
 ```
 
-Output:
+## Screenshots
 
-```text
-SOLVED 0.899621212121 A
-```
+[![The Power Electronics desktop app: Buck converter switch, diode, inductor and input-capacitor currents, with its worked example and live scene](https://www.ai999x.com/?ax_shot=power-electronics-ai999x/hero-dark.webp)](https://www.ai999x.com/models/power-electronics-ai999x/)
+
+[![Single-phase AC voltage controller (resistive load): the live scene in the Power Electronics desktop app](https://www.ai999x.com/?ax_shot=power-electronics-ai999x/see-1.webp)](https://www.ai999x.com/models/power-electronics-ai999x/)
+
+*Single-phase AC voltage controller (resistive load)*
+
+[![MOSFET conduction loss at junction temperature: the live scene in the Power Electronics desktop app](https://www.ai999x.com/?ax_shot=power-electronics-ai999x/see-2.webp)](https://www.ai999x.com/models/power-electronics-ai999x/)
+
+*MOSFET conduction loss at junction temperature*
+
+[![Chopper-fed separately excited DC motor: speed and torque: the live scene in the Power Electronics desktop app](https://www.ai999x.com/?ax_shot=power-electronics-ai999x/see-3.webp)](https://www.ai999x.com/models/power-electronics-ai999x/)
+
+*Chopper-fed separately excited DC motor: speed and torque*
 
 Every calculation, with its formula, a worked example and its figures: **[Power Electronics on ai999x.com](https://www.ai999x.com/models/power-electronics-ai999x/)**. Install guides for the app and the command line: [https://www.ai999x.com/desktop-cli/](https://www.ai999x.com/desktop-cli/).
 
-Version 1.6.3 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
+Version 1.6.4 · License: Apache-2.0 · Author: Ibnul Jaif Farabi · Organization: AI999X · Contact: support@ai999x.com · [Support the project](https://buymeacoffee.com/ibnuljaiffarabi)
 
 *The Future Is Self-Improving.*
 
 ## Source and releases
 
-This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/power-electronics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.3`; the [GitHub release](https://github.com/AI999X/power-electronics-ai999x/releases/tag/v1.6.3) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
+This repository holds the installable source of each release, exactly as published on [PyPI](https://pypi.org/project/power-electronics-ai999x/) (`pip install .` builds it). Releases are tagged `v1.6.4`; the [GitHub release](https://github.com/AI999X/power-electronics-ai999x/releases/tag/v1.6.4) carries the wheel, the desktop app and the command-line program for Windows and Linux, and their checksums.
 
 ## Build the program from source
 
