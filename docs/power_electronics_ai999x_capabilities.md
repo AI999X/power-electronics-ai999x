@@ -232,17 +232,13 @@ $$
 - **Assumes:** 0 < Vout < Vin; continuous conduction (IL_min > 0)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Peak-to-peak inductor ripple (dIL) against input voltage (Vin) from 12 V to 36 V, the other inputs as given: 31 points, each computed by the model (inputs it refuses are left out)](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-buck-ccm-dil-vs-vin.svg)
+![dIL (peak-to-peak inductor ripple) against Vin (input voltage), with Io = 3 A, L = 2](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-buck-ccm-dil-vs-vin.svg)
 
-*Peak-to-peak inductor ripple (dIL) against input voltage (Vin) from 12 V to 36 V, the other inputs as given: 31 points, each computed by the model (inputs it refuses are left out). Marked: the inputs given, Vin = 24 V, dIL = 899.6 mA. In SI units: dIL = 0.8996 A. Your inputs: Vin = 24 V, Vout = 5 V, L = 22 uH, fs = 200 kHz, Io = 3 A.*
+*dIL (peak-to-peak inductor ripple) against Vin (input voltage), with Io = 3 A, L = 2.20e-5 H, Vout = 5 V, fs = 2.00e5 Hz. 31 points computed by power-electronics-ai999x; marked: Vin = 24, dIL = 0.899621 A.*
 
-![Valley inductor current as Io runs from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-ccm-live-1)
+![dIL (peak-to-peak inductor ripple) against Vout (output voltage) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-ccm-curve)
 
-*Valley inductor current as Io runs from 1.8 to 4.2 A, every other input as you entered it (41 solutions). Marked: your Io = 3 A gives IL_min = 2.55. Your inputs: Vin = 24 V, Vout = 5 V, L = 22 uH, fs = 200 kHz, Io = 3 A.*
-
-![Peak-to-peak inductor ripple as Vin runs from 14](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-ccm-live-2)
-
-*Peak-to-peak inductor ripple as Vin runs from 14.4 to 33.6 V, every other input as you entered it (29 solutions). Marked: your Vin = 24 V gives dIL = 0.8996. Your inputs: Vin = 24 V, Vout = 5 V, L = 22 uH, fs = 200 kHz, Io = 3 A.*
+*dIL (peak-to-peak inductor ripple) against Vout (output voltage) from 0.5 V to 50 V on a logarithmic axis. One curve for each value of L (inductance): 2.2000e-05 H, 1.1000e-05 H, 4.4000e-05 H. Other inputs as in the worked example: Vin = 24.0 V, fs = 200000.0 Hz, Io = 3.0 A. 34 points per curve computed by power-electronics-ai999x; marked: the worked example, Vout = 5 V, dIL = 0.899621 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_ccm', Vin=24.0, Vout=5.0, L=2.2e-05, fs=200000.0, Io=3.0)
@@ -294,13 +290,9 @@ $$
 - **Assumes:** Vout > Vin > 0; continuous conduction (IL_min > 0)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Valley inductor current as Io runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-ccm-live-1)
+![dIL (peak-to-peak inductor ripple) against Vin (input voltage) from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-ccm-curve)
 
-*Valley inductor current as Io runs from 0.6 to 1.4 A, every other input as you entered it (41 solutions). Marked: your Io = 1 A gives IL_min = 3.55. Your inputs: Vin = 12 V, Vout = 48 V, L = 100 uH, fs = 100 kHz, Io = 1 A.*
-
-![Peak-to-peak inductor ripple as Vin runs from 7](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-ccm-live-2)
-
-*Peak-to-peak inductor ripple as Vin runs from 7.2 to 16.8 V, every other input as you entered it (29 solutions). Marked: your Vin = 12 V gives dIL = 0.9. Your inputs: Vin = 12 V, Vout = 48 V, L = 100 uH, fs = 100 kHz, Io = 1 A.*
+*dIL (peak-to-peak inductor ripple) against Vin (input voltage) from 1.2 V to 120 V on a logarithmic axis. One curve for each value of L (inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Vout = 48.0 V, fs = 100000.0 Hz, Io = 1.0 A. 33 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 12 V, dIL = 0.9 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_boost_ccm', Vin=12.0, Vout=48.0, L=0.0001, fs=100000.0, Io=1.0)
@@ -352,13 +344,9 @@ $$
 - **Assumes:** Vin, Vout > 0; continuous conduction (IL_min > 0)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Valley inductor current as Io runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-boost-ccm-live-1)
+![dIL (peak-to-peak inductor ripple) against L (inductance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-boost-ccm-curve)
 
-*Valley inductor current as Io runs from 0.6 to 1.4 A, every other input as you entered it (41 solutions). Marked: your Io = 1 A gives IL_min = 1.541. Your inputs: Vin = 12 V, Vout = 15 V, L = 47 uH, fs = 100 kHz, Io = 1 A.*
-
-![Peak-to-peak inductor ripple and peak inductor current as L runs from 28](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-boost-ccm-live-2)
-
-*Peak-to-peak inductor ripple and peak inductor current as L runs from 28.2 to 65.8 uH, every other input as you entered it (29 solutions). Marked: your L = 47 uH gives dIL = 1.418. Your inputs: Vin = 12 V, Vout = 15 V, L = 47 uH, fs = 100 kHz, Io = 1 A.*
+*dIL (peak-to-peak inductor ripple) against L (inductance) from 2.3500e-05 H to 7.0500e-05 H. One curve for each value of fs (switching frequency): 100000 Hz, 50000 Hz, 200000 Hz. Other inputs as in the worked example: Vin = 12.0 V, Vout = 15.0 V, Io = 1.0 A. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 4.7000e-05 H, dIL = 1.41844 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_boost_ccm', Vin=12.0, Vout=15.0, L=4.7e-05, fs=100000.0, Io=1.0)
@@ -405,17 +393,9 @@ $$
 - **Assumes:** $0 < D < 1$; ideal, continuous conduction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Conversion ratio Vout/Vin as D runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-conversion-ratio-live-1)
+![M (conversion ratio Vout/Vin (magnitude)) against D (duty cycle (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-conversion-ratio-curve)
 
-*Conversion ratio Vout/Vin as D runs from 0.15 to 0.9825, every other input as you entered it (38 solutions). Marked: your D = 0.6 gives M = 2.5. Your inputs: topology = boost, Vin = 12 V, D = 0.6.*
-
-![Conversion ratio Vout/Vin for every choice of topology, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-conversion-ratio-live-2)
-
-*Conversion ratio Vout/Vin for every choice of topology, every other input as you entered it (highlighted: your choice). buck: 0.6; boost: 2.5; buck-boost: 1.5; Cuk: 1.5; SEPIC: 1.5. Your inputs: topology = boost, Vin = 12 V, D = 0.6.*
-
-![Output voltage magnitude as Vin runs from 7](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-conversion-ratio-live-3)
-
-*Output voltage magnitude as Vin runs from 7.2 to 16.8 V, every other input as you entered it (27 solutions). Marked: your Vin = 12 V gives Vout = 30. Your inputs: topology = boost, Vin = 12 V, D = 0.6.*
+*M (conversion ratio Vout/Vin (magnitude)) against D (duty cycle (a fraction or %)) from 0.02 to 0.98. One curve for each value of topology (converter topology: buck, boost, buck-boost, Cuk or SEPIC): boost, buck. Other inputs as in the worked example: Vin = 12.0 V. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, D = 0.6, M = 2.5.*
 
 ```python
 power_electronics_ai999x.solve('pe_conversion_ratio', topology='boost', Vin=12.0, D=0.6)
@@ -466,13 +446,9 @@ $$
 - **Assumes:** 0 < Vout < Vin; continuous conduction; ripple current into C, ideal capacitor
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Peak-to-peak output ripple as fs runs from 120 to 280 kHz, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-output-ripple-live-1)
+![dVo (peak-to-peak output ripple) against Vout (output voltage) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-output-ripple-curve)
 
-*Peak-to-peak output ripple as fs runs from 120 to 280 kHz, every other input as you entered it (41 solutions). Marked: your fs = 200 kHz gives dVo = 5.623 mV. Your inputs: Vin = 24 V, Vout = 5 V, L = 22 uH, C = 100 uF, fs = 200 kHz.*
-
-![Peak-to-peak output ripple as L runs from 13](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-output-ripple-live-2)
-
-*Peak-to-peak output ripple as L runs from 13.2 to 30.8 uH, every other input as you entered it (29 solutions). Marked: your L = 22 uH gives dVo = 5.623 mV. Your inputs: Vin = 24 V, Vout = 5 V, L = 22 uH, C = 100 uF, fs = 200 kHz.*
+*dVo (peak-to-peak output ripple) against Vout (output voltage) from 0.5 V to 50 V on a logarithmic axis. One curve for each value of fs (switching frequency): 200000 Hz, 100000 Hz, 400000 Hz. Other inputs as in the worked example: Vin = 24.0 V, L = 2.2e-05 H, C = 9.999999999999999e-05 F. 34 points per curve computed by power-electronics-ai999x; marked: the worked example, Vout = 5 V, dVo = 0.00562263 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_output_ripple', Vin=24.0, Vout=5.0, L=2.2e-05, C=0.0001, fs=200000.0)
@@ -521,13 +497,9 @@ $$
 - **Assumes:** Vout > Vin > 0; continuous conduction, ideal capacitor
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Peak-to-peak output ripple as Io runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-output-ripple-live-1)
+![dVo (peak-to-peak output ripple) against C (output capacitance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-output-ripple-curve)
 
-*Peak-to-peak output ripple as Io runs from 0.6 to 1.4 A, every other input as you entered it (41 solutions). Marked: your Io = 1 A gives dVo = 0.1596. Your inputs: Vin = 12 V, Vout = 48 V, Io = 1 A, C = 47 uF, fs = 100 kHz.*
-
-![Peak-to-peak output ripple as C runs from 28](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-output-ripple-live-2)
-
-*Peak-to-peak output ripple as C runs from 28.2 to 65.8 uF, every other input as you entered it (29 solutions). Marked: your C = 47 uF gives dVo = 0.1596. Your inputs: Vin = 12 V, Vout = 48 V, Io = 1 A, C = 47 uF, fs = 100 kHz.*
+*dVo (peak-to-peak output ripple) against C (output capacitance) from 2.3500e-05 F to 7.0500e-05 F. One curve for each value of Io (load current): 1 A, 0.5 A, 2 A. Other inputs as in the worked example: Vin = 12.0 V, Vout = 48.0 V, fs = 100000.0 Hz. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, C = 4.7000e-05 F, dVo = 0.159574 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_boost_output_ripple', Vin=12.0, Vout=48.0, Io=1.0, C=4.7e-05, fs=100000.0)
@@ -582,13 +554,9 @@ $$
 - **Assumes:** continuous conduction in both inductors
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Coupling-capacitor ripple as Io runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-cuk-ccm-live-1)
+![dIL1 (input inductor ripple) against L1 (input inductance) from 5](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-cuk-ccm-curve)
 
-*Coupling-capacitor ripple as Io runs from 0.6 to 1.4 A, every other input as you entered it (41 solutions). Marked: your Io = 1 A gives dVC1 = 0.5556. Your inputs: Vin = 12 V, Vout = 15 V, L1 = 100 uH, L2 = 100 uH, C1 = 10 uF, fs = 100 kHz, Io = 1 A.*
-
-![Input inductor ripple and average input inductor current as Vout runs from 9 to 21 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-cuk-ccm-live-2)
-
-*Input inductor ripple and average input inductor current as Vout runs from 9 to 21 V, every other input as you entered it (29 solutions). Marked: your Vout = 15 V gives dIL1 = 0.6667. Your inputs: Vin = 12 V, Vout = 15 V, L1 = 100 uH, L2 = 100 uH, C1 = 10 uF, fs = 100 kHz, Io = 1 A.*
+*dIL1 (input inductor ripple) against L1 (input inductance) from 5.0000e-05 H to 0.00015 H. One curve for each value of fs (switching frequency): 100000 Hz, 50000 Hz, 200000 Hz. Other inputs as in the worked example: Vin = 12.0 V, Vout = 15.0 V, L2 = 9.999999999999999e-05 H, C1 = 9.999999999999999e-06 F, Io = 1.0 A. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L1 = 1.0000e-04 H, dIL1 = 0.666667 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_cuk_ccm', Vin=12.0, Vout=15.0, L1=0.0001, L2=0.0001, C1=1e-05, fs=100000.0, Io=1.0)
@@ -644,13 +612,9 @@ $$
 - **Assumes:** continuous conduction in both inductors
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Input inductor ripple and average input inductor current as Vin runs from 5](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-sepic-ccm-live-1)
+![dIL1 (input inductor ripple) against L1 (input inductance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-sepic-ccm-curve)
 
-*Input inductor ripple and average input inductor current as Vin runs from 5.4 to 12.6 V, every other input as you entered it (41 solutions). Marked: your Vin = 9 V gives dIL1 = 0.5471. Your inputs: Vin = 9 V, Vout = 12 V, L1 = 47 uH, L2 = 47 uH, C1 = 10 uF, fs = 200 kHz, Io = 1 A.*
-
-![Coupling-capacitor ripple as C1 runs from 6 to 14 uF, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-sepic-ccm-live-2)
-
-*Coupling-capacitor ripple as C1 runs from 6 to 14 uF, every other input as you entered it (29 solutions). Marked: your C1 = 10 uF gives dVC1 = 0.2857. Your inputs: Vin = 9 V, Vout = 12 V, L1 = 47 uH, L2 = 47 uH, C1 = 10 uF, fs = 200 kHz, Io = 1 A.*
+*dIL1 (input inductor ripple) against L1 (input inductance) from 2.3500e-05 H to 7.0500e-05 H. One curve for each value of fs (switching frequency): 200000 Hz, 100000 Hz, 400000 Hz. Other inputs as in the worked example: Vin = 9.0 V, Vout = 12.0 V, L2 = 4.7e-05 H, C1 = 9.999999999999999e-06 F, Io = 1.0 A. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L1 = 4.7000e-05 H, dIL1 = 0.547112 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_sepic_ccm', Vin=9.0, Vout=12.0, L1=4.7e-05, L2=4.7e-05, C1=1e-05, fs=200000.0, Io=1.0)
@@ -704,17 +668,13 @@ $$
 - **Assumes:** continuous conduction of the magnetizing current; no leakage inductance
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Duty cycle (D) against input voltage (Vin) from 24 V to 72 V, the other inputs as given: 31 points, each computed by the model (inputs it refuses are left out)](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-flyback-ccm-d-vs-vin.svg)
+![D (duty cycle) against Vin (input voltage), with Io = 2 A, Lm = 2](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-flyback-ccm-d-vs-vin.svg)
 
-*Duty cycle (D) against input voltage (Vin) from 24 V to 72 V, the other inputs as given: 31 points, each computed by the model (inputs it refuses are left out). Marked: the inputs given, Vin = 48 V, D = 0.3333. Your inputs: Vin = 48 V, Vout = 12 V, n = 2, Lm = 200 uH, fs = 100 kHz, Io = 2 A.*
+*D (duty cycle) against Vin (input voltage), with Io = 2 A, Lm = 2.00e-4 H, Vout = 12 V, fs = 1.00e5 Hz, n = 2. 31 points computed by power-electronics-ai999x; marked: Vin = 48, D = 0.333333.*
 
-![Average magnetizing current referred to the](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-flyback-ccm-live-1)
+![D (duty cycle) against Vin (input voltage) from 4](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-flyback-ccm-curve)
 
-*Average magnetizing current referred to the... as Io runs from 1.2 to 2.8 A, every other input as you entered it (41 solutions). Marked: your Io = 2 A gives Im = 1.5. Your inputs: Vin = 48 V, Vout = 12 V, n = 2, Lm = 200 uH, fs = 100 kHz, Io = 2 A.*
-
-![Magnetizing current ripple as Lm runs from 120 to 280 uH, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-flyback-ccm-live-2)
-
-*Magnetizing current ripple as Lm runs from 120 to 280 uH, every other input as you entered it (29 solutions). Marked: your Lm = 200 uH gives dIm = 0.8. Your inputs: Vin = 48 V, Vout = 12 V, n = 2, Lm = 200 uH, fs = 100 kHz, Io = 2 A.*
+*D (duty cycle) against Vin (input voltage) from 4.8 V to 480 V on a logarithmic axis. One curve for each value of Vout (output voltage): 12 V, 6 V, 24 V. Other inputs as in the worked example: n = 2.0, Lm = 0.00019999999999999998 H, fs = 100000.0 Hz, Io = 2.0 A. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 48 V, D = 0.333333.*
 
 ```python
 power_electronics_ai999x.solve('pe_flyback_ccm', Vin=48.0, Vout=12.0, n=2.0, Lm=0.0002, fs=100000.0, Io=2.0)
@@ -768,13 +728,9 @@ $$
 - **Assumes:** D < D_max; continuous conduction of the output inductor
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Valley output inductor current as Io runs from 3 to 7 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-forward-ccm-live-1)
+![D (duty cycle) against Vin (input voltage) from 24 V to 72 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-forward-ccm-curve)
 
-*Valley output inductor current as Io runs from 3 to 7 A, every other input as you entered it (41 solutions). Marked: your Io = 5 A gives IL_min = 4.609. Your inputs: Vin = 48 V, Vout = 5 V, n = 3, Nr = 1, L = 22 uH, fs = 200 kHz, Io = 5 A.*
-
-![Duty cycle as Vout runs from 3 to 7 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-forward-ccm-live-2)
-
-*Duty cycle as Vout runs from 3 to 7 V, every other input as you entered it (29 solutions). Marked: your Vout = 5 V gives D = 0.3125. Your inputs: Vin = 48 V, Vout = 5 V, n = 3, Nr = 1, L = 22 uH, fs = 200 kHz, Io = 5 A.*
+*D (duty cycle) against Vin (input voltage) from 24 V to 72 V. One curve for each value of Vout (output voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: n = 3.0, Nr = 1.0, L = 2.2e-05 H, fs = 200000.0 Hz, Io = 5.0 A. 27 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 48 V, D = 0.3125.*
 
 ```python
 power_electronics_ai999x.solve('pe_forward_ccm', Vin=48.0, Vout=5.0, n=3.0, Nr=1.0, L=2.2e-05, fs=200000.0, Io=5.0)
@@ -827,13 +783,9 @@ $$
 - **Assumes:** $D < 0.5$; continuous conduction of the output inductor
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Duty cycle of each switch as n runs from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bridge-converter-live-1)
+![D (duty cycle of each switch) against Vin (input voltage) from 200 V to 600 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bridge-converter-curve)
 
-*Duty cycle of each switch as n runs from 1.25 to 8.188, every other input as you entered it (38 solutions). Marked: your n = 5 gives D = 0.3. Your inputs: topology = full-bridge, Vin = 400 V, Vout = 48 V, n = 5, L = 5e-05 H, fs = 100000 Hz, Io = 10 A.*
-
-![Valley output inductor current as Io runs from 6 to 14 A, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bridge-converter-live-2)
-
-*Valley output inductor current as Io runs from 6 to 14 A, every other input as you entered it (29 solutions). Marked: your Io = 10 A gives IL_min = 9.04. Your inputs: topology = full-bridge, Vin = 400 V, Vout = 48 V, n = 5, L = 5e-05 H, fs = 100000 Hz, Io = 10 A.*
+*D (duty cycle of each switch) against Vin (input voltage) from 200 V to 600 V. One curve for each value of Vout (output voltage): 48 V, 24 V, 96 V. Other inputs as in the worked example: topology = full-bridge, n = 5.0, L = 4.9999999999999996e-05 H, fs = 100000.0 Hz, Io = 10.0 A. 27 points per curve computed by power-electronics-ai999x; marked: the worked example, Vin = 400 V, D = 0.3.*
 
 ```python
 power_electronics_ai999x.solve('pe_bridge_converter', topology='full-bridge', Vin=400.0, Vout=48.0, n=5.0, L=5e-05, fs=100000.0, Io=10.0)
@@ -882,17 +834,9 @@ $$
 - **Assumes:** ideal converter at the boundary of continuous conduction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Critical (boundary) inductance as Vin runs from 14](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-critical-inductance-live-1)
+![L_crit (critical (boundary) inductance) against fs (switching frequency) from 50000 Hz to 150000 Hz](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-critical-inductance-curve)
 
-*Critical (boundary) inductance as Vin runs from 14.4 to 33.6 V, every other input as you entered it (41 solutions). Marked: your Vin = 24 V gives L_crit = 25 uH. Your inputs: topology = buck, Vin = 24 V, Vout = 12 V, fs = 100000 Hz, R = 10 ohm.*
-
-![Critical (boundary) inductance for every choice of topology, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-critical-inductance-live-2)
-
-*Critical (boundary) inductance for every choice of topology, every other input as you entered it (highlighted: your choice). buck: 2.5e-05; boost: no answer; buck-boost: 2.222e-05. Your inputs: topology = buck, Vin = 24 V, Vout = 12 V, fs = 100000 Hz, R = 10 ohm.*
-
-![Critical (boundary) inductance as fs runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-critical-inductance-live-3)
-
-*Critical (boundary) inductance as fs runs from 6e+04 to 1.4e+05 Hz, every other input as you entered it (29 solutions). Marked: your fs = 1e+05 Hz gives L_crit = 25 uH. Your inputs: topology = buck, Vin = 24 V, Vout = 12 V, fs = 100000 Hz, R = 10 ohm.*
+*L_crit (critical (boundary) inductance) against fs (switching frequency) from 50000 Hz to 150000 Hz. One curve for each value of R (load resistance): 10 ohm, 5 ohm, 20 ohm. Other inputs as in the worked example: topology = buck, Vin = 24.0 V, Vout = 12.0 V. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, fs = 100000 Hz, L_crit = 2.5000e-05 H.*
 
 ```python
 power_electronics_ai999x.solve('pe_critical_inductance', topology='buck', Vin=24.0, Vout=12.0, fs=100000.0, R=10.0)
@@ -944,13 +888,9 @@ $$
 - **Assumes:** 0 < Vout < Vin; $0 < r < 2$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Required inductance as Io runs from 3 to 7 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-lc-design-live-1)
+![L (required inductance) against Vout (output voltage) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-lc-design-curve)
 
-*Required inductance as Io runs from 3 to 7 A, every other input as you entered it (41 solutions). Marked: your Io = 5 A gives L = 3.19 uH. Your inputs: Vin = 12 V, Vout = 3.3 V, Io = 5 A, fs = 500 kHz, r = 0.3, dV = 0.01 V.*
-
-![Required inductance as fs runs from 300 to 700 kHz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-lc-design-live-2)
-
-*Required inductance as fs runs from 300 to 700 kHz, every other input as you entered it (29 solutions). Marked: your fs = 500 kHz gives L = 3.19 uH. Your inputs: Vin = 12 V, Vout = 3.3 V, Io = 5 A, fs = 500 kHz, r = 0.3, dV = 0.01 V.*
+*L (required inductance) against Vout (output voltage) from 0.33 V to 33 V on a logarithmic axis. One curve for each value of r (ripple ratio dIL/Io (a fraction or %)): 0.3, 0.26, 0.74. Other inputs as in the worked example: Vin = 12.0 V, Io = 5.0 A, fs = 500000.0 Hz, dV = 0.01 V. 32 points per curve computed by power-electronics-ai999x; marked: the worked example, Vout = 3.3 V, L = 3.1900e-06 H.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_lc_design', Vin=12.0, Vout=3.3, Io=5.0, fs=500000.0, r=0.3, dV=0.01)
@@ -1005,13 +945,9 @@ $$
 - **Assumes:** 0 < Vout < Vin; continuous conduction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS switch current as Vin runs from 14](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-component-currents-live-1)
+![I_sw_rms (RMS switch current) against L (inductance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-component-currents-curve)
 
-*RMS switch current as Vin runs from 14.4 to 33.6 V, every other input as you entered it (41 solutions). Marked: your Vin = 24 V gives I_sw_rms = 1.374. Your inputs: Vin = 24 V, Vout = 5 V, Io = 3 A, L = 22 uH, fs = 200 kHz.*
-
-![RMS switch current as Vout runs from 3 to 7 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-component-currents-live-2)
-
-*RMS switch current as Vout runs from 3 to 7 V, every other input as you entered it (29 solutions). Marked: your Vout = 5 V gives I_sw_rms = 1.374. Your inputs: Vin = 24 V, Vout = 5 V, Io = 3 A, L = 22 uH, fs = 200 kHz.*
+*I_sw_rms (RMS switch current) against L (inductance) from 2.2000e-06 H to 0.00022 H on a logarithmic axis. One curve for each value of Io (load current): 3 A, 1.5 A, 6 A. Other inputs as in the worked example: Vin = 24.0 V, Vout = 5.0 V, fs = 200000.0 Hz. 37 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 2.2000e-05 H, I_sw_rms = 1.37443 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_component_currents', Vin=24.0, Vout=5.0, Io=3.0, L=2.2e-05, fs=200000.0)
@@ -1062,13 +998,9 @@ $$
 - **Assumes:** $2  \leq  N  \leq  12$; 0 < Vout < Vin; continuous conduction in each phase
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Ripple of the summed output current and ripple of one phase as Vin runs from 7](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-interleaved-buck-ripple-live-1)
+![dI_total (ripple of the summed output current) against Vout (output voltage) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-interleaved-buck-ripple-curve)
 
-*Ripple of the summed output current and ripple of one phase as Vin runs from 7.2 to 16.8 V, every other input as you entered it (41 solutions). Marked: your Vin = 12 V gives dI_total = 4.085. Your inputs: N = 2, Vin = 12 V, Vout = 1.2 V, L = 0.47 uH, fs = 500 kHz.*
-
-![Ripple of the summed output current and ripple of one phase as L runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-interleaved-buck-ripple-live-2)
-
-*Ripple of the summed output current and ripple of one phase as L runs from 0.282 to 0.658 uH, every other input as you entered it (29 solutions). Marked: your L = 0.47 uH gives dI_total = 4.085. Your inputs: N = 2, Vin = 12 V, Vout = 1.2 V, L = 0.47 uH, fs = 500 kHz.*
+*dI_total (ripple of the summed output current) against Vout (output voltage) from 0.12 V to 12 V on a logarithmic axis. One curve for each value of L (inductance of each phase): 4.7000e-07 H, 2.3500e-07 H, 9.4000e-07 H. Other inputs as in the worked example: N = 2, Vin = 12.0 V, fs = 500000.0 Hz. 40 points per curve computed by power-electronics-ai999x; marked: the worked example, Vout = 1.2 V, dI_total = 4.08511 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_interleaved_buck_ripple', N=2, Vin=12.0, Vout=1.2, L=4.7e-07, fs=500000.0)
@@ -1120,13 +1052,9 @@ $$
 - **Assumes:** $K < 1 - D$ (discontinuous conduction)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Conversion ratio Vout/Vin as R runs from 12 to 28 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-dcm-live-1)
+![M (conversion ratio Vout/Vin) against D (duty cycle (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-dcm-curve)
 
-*Conversion ratio Vout/Vin as R runs from 12 to 28 ohm, every other input as you entered it (41 solutions). Marked: your R = 20 ohm gives M = 0.6. Your inputs: Vin = 24 V, L = 10 uH, fs = 100 kHz, R = 20 ohm, D = 0.3.*
-
-![Conversion ratio Vout/Vin as L runs from 6 to 14 uH, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-dcm-live-2)
-
-*Conversion ratio Vout/Vin as L runs from 6 to 14 uH, every other input as you entered it (29 solutions). Marked: your L = 10 uH gives M = 0.6. Your inputs: Vin = 24 V, L = 10 uH, fs = 100 kHz, R = 20 ohm, D = 0.3.*
+*M (conversion ratio Vout/Vin) against D (duty cycle (a fraction or %)) from 0.02 to 0.98. One curve for each value of L (inductance): 1.0000e-05 H, 5.0000e-06 H, 2.0000e-05 H. Other inputs as in the worked example: Vin = 24.0 V, fs = 100000.0 Hz, R = 20.0 ohm. 37 points per curve computed by power-electronics-ai999x; marked: the worked example, D = 0.3, M = 0.6.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_dcm', Vin=24.0, L=1e-05, fs=100000.0, R=20.0, D=0.3)
@@ -1178,13 +1106,9 @@ $$
 - **Assumes:** $K < D$ $(1 - D)^{2}$ (discontinuous conduction)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Load current as Vin runs from 7](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-dcm-live-1)
+![M (conversion ratio Vout/Vin) against L (inductance) from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-dcm-curve)
 
-*Load current as Vin runs from 7.2 to 16.8 V, every other input as you entered it (41 solutions). Marked: your Vin = 12 V gives Io = 0.4047. Your inputs: Vin = 12 V, L = 10 uH, fs = 100 kHz, R = 100 ohm, D = 0.4.*
-
-![Conversion ratio Vout/Vin as L runs from 6 to 14 uH, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-dcm-live-2)
-
-*Conversion ratio Vout/Vin as L runs from 6 to 14 uH, every other input as you entered it (29 solutions). Marked: your L = 10 uH gives M = 3.372. Your inputs: Vin = 12 V, L = 10 uH, fs = 100 kHz, R = 100 ohm, D = 0.4.*
+*M (conversion ratio Vout/Vin) against L (inductance) from 1.0000e-06 H to 0.0001 H on a logarithmic axis. One curve for each value of fs (switching frequency): 100000 Hz, 50000 Hz, 200000 Hz. Other inputs as in the worked example: Vin = 12.0 V, R = 100.0 ohm, D = 0.4. 38 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 1.0000e-05 H, M = 3.37228.*
 
 ```python
 power_electronics_ai999x.solve('pe_boost_dcm', Vin=12.0, L=1e-05, fs=100000.0, R=100.0, D=0.4)
@@ -1236,13 +1160,9 @@ $$
 - **Assumes:** $K < (1 - D)^{2}$ (discontinuous conduction)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![M as R runs from 30 to 70 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-boost-dcm-live-1)
+![M (conversion ratio |Vout|/Vin) against L (inductance) from 5](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-boost-dcm-curve)
 
-*M as R runs from 30 to 70 ohm, every other input as you entered it (41 solutions). Marked: your R = 50 ohm gives M = 2. Your inputs: Vin = 12 V, L = 10 uH, fs = 100 kHz, R = 50 ohm, D = 0.4.*
-
-![Load current as Vin runs from 7](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-boost-dcm-live-2)
-
-*Load current as Vin runs from 7.2 to 16.8 V, every other input as you entered it (29 solutions). Marked: your Vin = 12 V gives Io = 0.48. Your inputs: Vin = 12 V, L = 10 uH, fs = 100 kHz, R = 50 ohm, D = 0.4.*
+*M (conversion ratio |Vout|/Vin) against L (inductance) from 5.0000e-06 H to 1.5000e-05 H. One curve for each value of fs (switching frequency): 100000 Hz, 50000 Hz, 200000 Hz. Other inputs as in the worked example: Vin = 12.0 V, R = 50.0 ohm, D = 0.4. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 1.0000e-05 H, M = 2.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_boost_dcm', Vin=12.0, L=1e-05, fs=100000.0, R=50.0, D=0.4)
@@ -1294,13 +1214,9 @@ $$
 - **Assumes:** discontinuous conduction: the stored energy is fully released every period
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Magnetizing inductance as Vin runs from 60 to 140 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-flyback-dcm-design-live-1)
+![Lm (magnetizing inductance) against Po (output power) from 15 W to 45 W](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-flyback-dcm-design-curve)
 
-*Magnetizing inductance as Vin runs from 60 to 140 V, every other input as you entered it (41 solutions). Marked: your Vin = 100 V gives Lm = 0.2869 mH. Your inputs: Vin = 100 V, Po = 30 W, eff = 0.85, fs = 100 kHz, D = 0.45.*
-
-![Magnetizing inductance as D runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-flyback-dcm-design-live-2)
-
-*Magnetizing inductance as D runs from 0.1125 to 0.7875, every other input as you entered it (29 solutions). Marked: your D = 0.45 gives Lm = 0.2869 mH. Your inputs: Vin = 100 V, Po = 30 W, eff = 0.85, fs = 100 kHz, D = 0.45.*
+*Lm (magnetizing inductance) against Po (output power) from 15 W to 45 W. One curve for each value of Vin (input voltage (the minimum, for design)): 100 V, 50 V, 200 V. Other inputs as in the worked example: eff = 0.85, fs = 100000.0 Hz, D = 0.45. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Po = 30 W, Lm = 0.000286875 H.*
 
 ```python
 power_electronics_ai999x.solve('pe_flyback_dcm_design', Vin=100.0, Po=30.0, eff=0.85, fs=100000.0, D=0.45)
@@ -1352,13 +1268,9 @@ $$
 - **Assumes:** $0 < RL < R$; continuous conduction, ideal switches
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Conversion ratio as D runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-nonideal-gain-live-1)
+![M (conversion ratio) against D (duty cycle (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-nonideal-gain-curve)
 
-*Conversion ratio as D runs from 0.1875 to 0.975, every other input as you entered it (29 solutions). Marked: your D = 0.75 gives M = 3.448. Your inputs: Vin = 12 V, D = 0.75, R = 50 ohm, RL = 0.5 ohm.*
-
-![Average inductor current as Vin runs from 7](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-nonideal-gain-live-2)
-
-*Average inductor current as Vin runs from 7.2 to 16.8 V, every other input as you entered it (29 solutions). Marked: your Vin = 12 V gives IL = 3.31. Your inputs: Vin = 12 V, D = 0.75, R = 50 ohm, RL = 0.5 ohm.*
+*M (conversion ratio) against D (duty cycle (a fraction or %)) from 0.02 to 0.98. One curve for each value of R (load resistance): 50 ohm, 25 ohm, 100 ohm. Other inputs as in the worked example: Vin = 12.0 V, RL = 0.5 ohm. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, D = 0.75, M = 3.44828.*
 
 ```python
 power_electronics_ai999x.solve('pe_boost_nonideal_gain', Vin=12.0, D=0.75, R=50.0, RL=0.5)
@@ -1414,13 +1326,9 @@ $$
 - **Assumes:** continuous conduction, ripple neglected; hard switching with linear crossover at Vin and Io
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Efficiency as Io runs from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-with-losses-live-1)
+![efficiency (efficiency) against fs (switching frequency) from 20000 Hz to 2e+06 Hz on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-with-losses-curve)
 
-*Efficiency as Io runs from 2.4 to 5.6 A, every other input as you entered it (41 solutions). Marked: your Io = 4 A gives efficiency = 0.9024. Your inputs: Vin = 24 V, Vout = 5 V, Io = 4 A, fs = 200 kHz, Rds = 0.02 ohm, RL = 0.01 ohm, VF = 0.5 V, tsw = 40 ns.*
-
-![Efficiency as Rds runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-buck-with-losses-live-2)
-
-*Efficiency as Rds runs from 0.012 to 0.028 ohm, every other input as you entered it (29 solutions). Marked: your Rds = 0.02 ohm gives efficiency = 0.9024. Your inputs: Vin = 24 V, Vout = 5 V, Io = 4 A, fs = 200 kHz, Rds = 0.02 ohm, RL = 0.01 ohm, VF = 0.5 V, tsw = 40 ns.*
+*efficiency (efficiency) against fs (switching frequency) from 20000 Hz to 2e+06 Hz on a logarithmic axis. One curve for each value of Vout (output voltage): 5 V, 2.5 V, 10 V. Other inputs as in the worked example: Vin = 24.0 V, Io = 4.0 A, Rds = 0.02 ohm, RL = 0.01 ohm, VF = 0.5 V, tsw = 4e-08 s. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, fs = 200000 Hz, efficiency = 0.90241.*
 
 ```python
 power_electronics_ai999x.solve('pe_buck_with_losses', Vin=24.0, Vout=5.0, Io=4.0, fs=200000.0, Rds=0.02, RL=0.01, VF=0.5, tsw=4e-08)
@@ -1472,17 +1380,9 @@ $$
 - **Assumes:** ideal converter in continuous conduction, no ESR
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Double-pole (corner) frequency as D runs from 0](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-converter-small-signal-live-1.svg)
+![f0 (double-pole (corner) frequency) against L (inductance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-converter-small-signal-curve)
 
-*Double-pole (corner) frequency as D runs from 0.125 to 0.875, every other input as you entered it (41 solutions). Marked: your D = 0.5 gives f0 = 1125. Your inputs: topology = boost, Vin = 12 V, D = 0.5, L = 5e-05 H, C = 0.0001 F, R = 10 ohm.*
-
-![Double-pole (corner) frequency for every choice of topology, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-converter-small-signal-live-2)
-
-*Double-pole (corner) frequency for every choice of topology, every other input as you entered it (highlighted: your choice). buck: 2251; boost: 1125; buck-boost: 1125. Your inputs: topology = boost, Vin = 12 V, D = 0.5, L = 5e-05 H, C = 0.0001 F, R = 10 ohm.*
-
-![Quality factor of the double pole as R runs from 6 to 14 ohm, every other input as you entered it (25 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-converter-small-signal-live-3)
-
-*Quality factor of the double pole as R runs from 6 to 14 ohm, every other input as you entered it (25 solutions). Marked: your R = 10 ohm gives Q = 7.071. Your inputs: topology = boost, Vin = 12 V, D = 0.5, L = 5e-05 H, C = 0.0001 F, R = 10 ohm.*
+*f0 (double-pole (corner) frequency) against L (inductance) from 2.5000e-05 H to 7.5000e-05 H. One curve for each value of C (output capacitance): 1.0000e-04 F, 5.0000e-05 F, 0.0002 F. Other inputs as in the worked example: topology = boost, Vin = 12.0 V, D = 0.5, R = 10.0 ohm. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 5.0000e-05 H, f0 = 1125.4 Hz.*
 
 ```python
 power_electronics_ai999x.solve('pe_converter_small_signal', topology='boost', Vin=12.0, D=0.5, L=5e-05, C=0.0001, R=10.0)
@@ -1535,21 +1435,17 @@ $$
 - **Assumes:** 0 < Vout < Vin; continuous conduction
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Perturbation factor per switching period (alpha) against input voltage (Vin) from 8](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-peak-current-mode-slope-alpha-vs-vin)
+![alpha (perturbation factor per switching period) against Vin (input voltage), with L = 1](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-peak-current-mode-slope-alpha-vs-vin.svg)
 
-*Perturbation factor per switching period (alpha) against input voltage (Vin) from 8.4 V to 18 V, the other inputs as given: 25 points, each computed by the model (inputs it refuses are left out). Marked: the inputs given, Vin = 12 V, alpha = -0.7143. Your inputs: Vin = 12 V, Vout = 8 V, L = 10 uH, fs = 300 kHz, ma = 0.3 A/us.*
+*alpha (perturbation factor per switching period) against Vin (input voltage), with L = 1.00e-5 H, Vout = 8 V, fs = 3.00e5 Hz, ma = 3.00e5 A/s. 25 points computed by power-electronics-ai999x; marked: Vin = 12, alpha = -0.714286.*
 
-![Perturbation factor per switching period as Vout runs from 4](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-peak-current-mode-slope-live-1)
+![stable or unstable (stable) over Vin (input voltage) from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-peak-current-mode-slope-decision)
 
-*Perturbation factor per switching period as Vout runs from 4.8 to 11.2 V, every other input as you entered it (41 solutions). Marked: your Vout = 8 V gives α = -0.7143. Shaded by stable or unstable: stable, unstable. Your inputs: Vin = 12 V, Vout = 8 V, L = 10 uH, fs = 300 kHz, ma = 0.3 A/us.*
+*stable or unstable (stable) over Vin (input voltage) from 1.2 V to 120 V and Vout (output voltage) from 0.8 V to 80 V (logarithmic axes): each of the 31 × 21 cells is one run of power-electronics-ai999x, coloured by the verdict it returned, stable: 341 cells, unstable: 39 cells; blank cells: inputs the capability refuses. Other inputs as in the worked example: L = 9.999999999999999e-06 H, fs = 300000.0 Hz, ma = 300000.0 A/s. Marked: the worked example, Vin = 12 V, Vout = 8 V → stable.*
 
-![Stable or unstable for 25 5 x 5 combinations of Vout and L around your inputs (the other inputs as entered); the ring marks your inputs, which give stable](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-peak-current-mode-slope-live-2)
+![alpha (perturbation factor per switching period) against Vout (output voltage) from 4 V to 12 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-peak-current-mode-slope-curve)
 
-*Stable or unstable for 25 5 x 5 combinations of Vout and L around your inputs (the other inputs as entered); the ring marks your inputs, which give stable. Blank cells admit no answer. Your inputs: Vin = 12 V, Vout = 8 V, L = 10 uH, fs = 300 kHz, ma = 0.3 A/us.*
-
-![Perturbation factor per switching period as L runs from 6 to 14 uH, every other input as you entered it (19 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-peak-current-mode-slope-live-3)
-
-*Perturbation factor per switching period as L runs from 6 to 14 uH, every other input as you entered it (19 solutions). Marked: your L = 10 uH gives α = -0.7143. Shaded by stable or unstable: unstable, stable. Your inputs: Vin = 12 V, Vout = 8 V, L = 10 uH, fs = 300 kHz, ma = 0.3 A/us.*
+*alpha (perturbation factor per switching period) against Vout (output voltage) from 4 V to 12 V. One curve for each value of L (inductance): 1.0000e-05 H, 5.0000e-06 H, 2.0000e-05 H. Other inputs as in the worked example: Vin = 12.0 V, fs = 300000.0 Hz, ma = 300000.0 A/s. 30 points per curve computed by power-electronics-ai999x; marked: the worked example, Vout = 8 V, alpha = -0.714286.*
 
 ```python
 power_electronics_ai999x.solve('pe_peak_current_mode_slope', Vin=12.0, Vout=8.0, L=1e-05, fs=300000.0, ma=300000.0)
@@ -1603,13 +1499,9 @@ $$
 - **Assumes:** ideal diodes, no source inductance, resistive load
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS line current as R runs from 30 to 70 ohm, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-diode-bridge-live-1)
+![Vdc (average output voltage) against VLL (RMS line-to-line source voltage) from 200 V to 600 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-diode-bridge-curve)
 
-*RMS line current as R runs from 30 to 70 ohm, every other input as you entered it (41 solutions). Marked: your R = 50 ohm gives Is_rms = 8.829. Your inputs: VLL = 400 V, f = 0.05 kHz, R = 50 ohm.*
-
-![Average output voltage as VLL runs from 240 to 560 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-diode-bridge-live-2)
-
-*Average output voltage as VLL runs from 240 to 560 V, every other input as you entered it (29 solutions). Marked: your VLL = 400 V gives Vdc = 540.2. Your inputs: VLL = 400 V, f = 0.05 kHz, R = 50 ohm.*
+*Vdc (average output voltage) against VLL (RMS line-to-line source voltage) from 200 V to 600 V. Outputs with the same unit drawn together: Vrms (RMS output voltage), PIV (diode peak inverse voltage). Other inputs as in the worked example: f = 50.0 Hz, R = 50.0 ohm. 31 points computed by power-electronics-ai999x; marked: the worked example, VLL = 400 V, Vdc = 540.19 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_three_phase_diode_bridge', VLL=400.0, f=50.0, R=50.0)
@@ -1662,13 +1554,9 @@ $$
 - **Assumes:** ideal diodes, resistive load
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Average output voltage as Vph runs from 138 to 322 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-half-wave-rectifier-live-1)
+![Vdc (average output voltage) against Vph (RMS phase (line-to-neutral) voltage) from 115 V to 345 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-half-wave-rectifier-curve)
 
-*Average output voltage as Vph runs from 138 to 322 V, every other input as you entered it (41 solutions). Marked: your Vph = 230 V gives Vdc = 269. Your inputs: Vph = 230 V, f = 0.05 kHz, R = 20 ohm.*
-
-![Average diode current as R runs from 12 to 28 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-half-wave-rectifier-live-2)
-
-*Average diode current as R runs from 12 to 28 ohm, every other input as you entered it (29 solutions). Marked: your R = 20 ohm gives I_diode_avg = 4.483. Your inputs: Vph = 230 V, f = 0.05 kHz, R = 20 ohm.*
+*Vdc (average output voltage) against Vph (RMS phase (line-to-neutral) voltage) from 115 V to 345 V. Outputs with the same unit drawn together: Vrms (RMS output voltage), PIV (diode peak inverse voltage). Other inputs as in the worked example: f = 50.0 Hz, R = 20.0 ohm. 31 points computed by power-electronics-ai999x; marked: the worked example, Vph = 230 V, Vdc = 268.995 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_three_phase_half_wave_rectifier', Vph=230.0, f=50.0, R=20.0)
@@ -1716,21 +1604,13 @@ $$
 - **Assumes:** $0  \leq  \alpha < 180$ degrees; ideal thyristors, no source inductance
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Average output voltage (Vdc) over Vs from 115 V to 345 V and alpha from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-controlled-rectifier-field)
+![Vdc (average output voltage) against alpha (firing angle (delay from the natural commutation point)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-controlled-rectifier-curve)
 
-*Average output voltage (Vdc) over Vs from 115 V to 345 V and alpha from 0 rad to 1.571 rad: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, Vdc = 179.3 V. Your inputs: circuit = full-bridge, Vs = 230 V, alpha = 0.5235987755982988 rad.*
+*Vdc (average output voltage) against alpha (firing angle (delay from the natural commutation point)) from 0 rad to 1.5708 rad. One curve for each value of Vs (RMS source voltage): 230 V, 115 V, 460 V. Other inputs as in the worked example: circuit = full-bridge. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, alpha = 0.523599 rad, Vdc = 179.33 V.*
 
-![Average output voltage as Vs runs from 138 to 322 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-controlled-rectifier-live-1)
+![Vdc (average output voltage) over Vs (RMS source voltage) from 115 V to 345 V and alpha (firing angle (delay from the natural commutation point)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-controlled-rectifier-field)
 
-*Average output voltage as Vs runs from 138 to 322 V, every other input as you entered it (41 solutions). Marked: your Vs = 230 V gives Vdc = 179.3. Your inputs: circuit = full-bridge, Vs = 230 V, alpha = 0.5235987755982988 rad.*
-
-![Average output voltage for every choice of circuit, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-controlled-rectifier-live-2)
-
-*Average output voltage for every choice of circuit, every other input as you entered it (highlighted: your choice). half-wave: 96.6; full-bridge: 179.3; semi-converter: 193.2. Your inputs: circuit = full-bridge, Vs = 230 V, alpha = 0.5235987755982988 rad.*
-
-![Average output voltage and RMS of the AC component as α runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-controlled-rectifier-live-3)
-
-*Average output voltage and RMS of the AC component as α runs from 0.3142 to 0.733 rad, every other input as you entered it (27 solutions). Marked: your α = 0.5236 rad gives Vdc = 179.3. Your inputs: circuit = full-bridge, Vs = 230 V, alpha = 0.5235987755982988 rad.*
+*Vdc (average output voltage) over Vs (RMS source voltage) from 115 V to 345 V and alpha (firing angle (delay from the natural commutation point)) from 0 rad to 1.5708 rad: each of the 21 × 15 cells is one run of power-electronics-ai999x, shaded by its value (light 5.0698e-10 V to dark 310.609 V); iso-lines at Vdc = 100, 200, 300 V. Other inputs as in the worked example: circuit = full-bridge. Marked: the worked example, Vs = 230 V, alpha = 0.523599 rad, Vdc = 179.33 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_single_phase_controlled_rectifier', circuit='full-bridge', Vs=230.0, alpha=0.5235987755982988)
@@ -1781,13 +1661,9 @@ $$
 - **Assumes:** $0  \leq  \alpha < 180$ degrees; continuous constant current, no source inductance
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Average thyristor current as Id runs from 30 to 70 A, every other input as you entered it (41 solutions)](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-three-phase-controlled-rectifier-live-1.svg)
+![Vdc (average output voltage) against alpha (firing angle) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-controlled-rectifier-curve)
 
-*Average thyristor current as Id runs from 30 to 70 A, every other input as you entered it (41 solutions). Marked: your Id = 50 A gives I_thy_avg = 16.67. Your inputs: VLL = 415 V, alpha = 45 deg, Id = 50 A.*
-
-![Average output voltage and RMS output voltage as VLL runs from 249 to 581 V, every other input as you entered it (27 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-controlled-rectifier-live-2)
-
-*Average output voltage and RMS output voltage as VLL runs from 249 to 581 V, every other input as you entered it (27 solutions). Marked: your VLL = 415 V gives Vdc = 396.3. Your inputs: VLL = 415 V, alpha = 45 deg, Id = 50 A.*
+*Vdc (average output voltage) against alpha (firing angle) from 0 rad to 1.5708 rad. One curve for each value of VLL (RMS line-to-line source voltage): 415 V, 207.5 V, 830 V. Other inputs as in the worked example: Id = 50.0 A. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, alpha = 0.785398 rad, Vdc = 396.296 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_three_phase_controlled_rectifier', VLL=415.0, alpha=0.7853981633974483, Id=50.0)
@@ -1837,13 +1713,9 @@ $$
 - **Assumes:** $0  \leq  \alpha < 180$ degrees; resistive load
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS output voltage as Vs runs from 138 to 322 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-ac-voltage-controller-live-1)
+![Vo_rms (RMS output voltage) against alpha (firing angle) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-ac-voltage-controller-curve)
 
-*RMS output voltage as Vs runs from 138 to 322 V, every other input as you entered it (41 solutions). Marked: your Vs = 230 V gives Vo_rms = 206.3. Your inputs: Vs = 230 V, alpha = 60 deg, R = 10 ohm.*
-
-![Average thyristor current as R runs from 6 to 14 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-ac-voltage-controller-live-2)
-
-*Average thyristor current as R runs from 6 to 14 ohm, every other input as you entered it (29 solutions). Marked: your R = 10 ohm gives I_scr_avg = 7.765. Your inputs: Vs = 230 V, alpha = 60 deg, R = 10 ohm.*
+*Vo_rms (RMS output voltage) against alpha (firing angle) from 0 rad to 1.5708 rad. One curve for each value of Vs (RMS source voltage): 230 V, 115 V, 460 V. Other inputs as in the worked example: R = 10.0 ohm. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, alpha = 1.0472 rad, Vo_rms = 206.296 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_ac_voltage_controller', Vs=230.0, alpha=1.0471975511965976, R=10.0)
@@ -1895,17 +1767,9 @@ $$
 - **Assumes:** constant (ripple-free) dc current, no commutation overlap
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS fundamental line current as Id runs from 6 to 14 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-current-pf-live-1)
+![PF (power factor) against alpha (firing angle) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-current-pf-curve)
 
-*RMS fundamental line current as Id runs from 6 to 14 A, every other input as you entered it (41 solutions). Marked: your Id = 10 A gives Is1_rms = 9.003. Your inputs: circuit = single-phase, Id = 10 A, Vs = 230 V, alpha = 0 rad.*
-
-![Power factor for every choice of circuit, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-current-pf-live-2)
-
-*Power factor for every choice of circuit, every other input as you entered it (highlighted: your choice). single-phase: 0.9003; three-phase: 0.9549. Your inputs: circuit = single-phase, Id = 10 A, Vs = 230 V, alpha = 0 rad.*
-
-![Apparent power as Vs runs from 138 to 322 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-current-pf-live-3)
-
-*Apparent power as Vs runs from 138 to 322 V, every other input as you entered it (29 solutions). Marked: your Vs = 230 V gives S = 2300. Your inputs: circuit = single-phase, Id = 10 A, Vs = 230 V, alpha = 0 rad.*
+*PF (power factor) against alpha (firing angle) from 0 rad to 1.5708 rad. One curve for each value of circuit (single-phase or three-phase bridge): single-phase, three-phase. Other inputs as in the worked example: Id = 10.0 A, Vs = 230.0 V. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, alpha = 0 rad, PF = 0.900316.*
 
 ```python
 power_electronics_ai999x.solve('pe_rectifier_line_current_pf', circuit='single-phase', Id=10.0, Vs=230.0, alpha=0.0)
@@ -1953,21 +1817,13 @@ $$
 - **Assumes:** $1  \leq  h  \leq  49$; constant dc current, no overlap
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS current of harmonic h (Ih) over Id from 50 A to 150 A and h from 1 to 13: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-harmonics-field)
+![Ih (RMS current of harmonic h) against h (harmonic order) from 1 to 13](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-harmonics-curve)
 
-*RMS current of harmonic h (Ih) over Id from 50 A to 150 A and h from 1 to 13: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, Ih = 15.59 A. Your inputs: circuit = three-phase, Id = 100 A, h = 5.*
+*Ih (RMS current of harmonic h) against h (harmonic order) from 1 to 13. One curve for each value of Id (constant dc output current): 100 A, 50 A, 200 A. Other inputs as in the worked example: circuit = three-phase. 13 points per curve computed by power-electronics-ai999x; marked: the worked example, h = 5, Ih = 15.5939 A.*
 
-![RMS current of harmonic h as h runs from 1 to 9, every other input as you entered it (9 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-harmonics-live-1)
+![Ih (RMS current of harmonic h) over Id (constant dc output current) from 50 A to 150 A and h (harmonic order) from 1 to 13: each of the 21 × 13 cells is one run of power-electronics-ai999x, shaded by its value (light 0 A to dark 116](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-harmonics-field)
 
-*RMS current of harmonic h as h runs from 1 to 9, every other input as you entered it (9 solutions). Marked: your h = 5 gives Ih = 15.59. Your inputs: circuit = three-phase, Id = 100 A, h = 5.*
-
-![RMS current of harmonic h for every choice of circuit, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-harmonics-live-2)
-
-*RMS current of harmonic h for every choice of circuit, every other input as you entered it (highlighted: your choice). single-phase: 18.01; three-phase: 15.59. Your inputs: circuit = three-phase, Id = 100 A, h = 5.*
-
-![RMS current of harmonic h and RMS fundamental current as Id runs from 60 to 140 A, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rectifier-line-harmonics-live-3)
-
-*RMS current of harmonic h and RMS fundamental current as Id runs from 60 to 140 A, every other input as you entered it (29 solutions). Marked: your Id = 100 A gives Ih = 15.59. Your inputs: circuit = three-phase, Id = 100 A, h = 5.*
+*Ih (RMS current of harmonic h) over Id (constant dc output current) from 50 A to 150 A and h (harmonic order) from 1 to 13: each of the 21 × 13 cells is one run of power-electronics-ai999x, shaded by its value (light 0 A to dark 116.955 A); iso-lines at Ih = 20, 40, 60, 80, 100 A. Other inputs as in the worked example: circuit = three-phase. Marked: the worked example, Id = 100 A, h = 5, Ih = 15.5939 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_rectifier_line_harmonics', circuit='three-phase', Id=100.0, h=5)
@@ -2017,13 +1873,9 @@ $$
 - **Assumes:** ideal diode, no freewheeling diode
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Average load current as Vs runs from 72 to 168 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-half-wave-rl-rectifier-live-1)
+![beta_deg (extinction angle in degrees) against f (line frequency) from 6 Hz to 600 Hz on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-half-wave-rl-rectifier-curve)
 
-*Average load current as Vs runs from 72 to 168 V, every other input as you entered it (41 solutions). Marked: your Vs = 120 V gives I_avg = 0.5228. Your inputs: Vs = 120 V, f = 0.06 kHz, R = 100 ohm, L = 100 mH.*
-
-![Extinction angle in degrees as f runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-half-wave-rl-rectifier-live-2)
-
-*Extinction angle in degrees as f runs from 0.036 to 0.084 kHz, every other input as you entered it (29 solutions). Marked: your f = 0.06 kHz gives β_deg = 200.7. Your inputs: Vs = 120 V, f = 0.06 kHz, R = 100 ohm, L = 100 mH.*
+*beta_deg (extinction angle in degrees) against f (line frequency) from 6 Hz to 600 Hz on a logarithmic axis. One curve for each value of R (load resistance): 100 ohm, 50 ohm, 200 ohm. Other inputs as in the worked example: Vs = 120.0 V, L = 0.1 H. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 60 Hz, beta_deg = 200.658.*
 
 ```python
 power_electronics_ai999x.solve('pe_half_wave_rl_rectifier', Vs=120.0, f=60.0, R=100.0, L=0.1)
@@ -2075,17 +1927,9 @@ $$
 - **Assumes:** ideal diode and source, steady state
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Peak-to-peak ripple and average output voltage as Vp runs from 101](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-capacitor-filter-exact-live-1)
+![dV (peak-to-peak ripple) against f (line frequency) from 6 Hz to 600 Hz on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-capacitor-filter-exact-curve)
 
-*Peak-to-peak ripple and average output voltage as Vp runs from 101.8 to 237.6 V, every other input as you entered it (41 solutions). Marked: your Vp = 169.7 V gives dV = 43.13. Your inputs: circuit = half-wave, Vp = 169.7 V, f = 60 Hz, R = 500 ohm, C = 0.0001 F.*
-
-![Peak-to-peak ripple for every choice of circuit, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-capacitor-filter-exact-live-2)
-
-*Peak-to-peak ripple for every choice of circuit, every other input as you entered it (highlighted: your choice). half-wave: 43.13; full-wave: 21.88. Your inputs: circuit = half-wave, Vp = 169.7 V, f = 60 Hz, R = 500 ohm, C = 0.0001 F.*
-
-![Peak-to-peak ripple and average output voltage as f runs from 36 to 84 Hz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-capacitor-filter-exact-live-3)
-
-*Peak-to-peak ripple and average output voltage as f runs from 36 to 84 Hz, every other input as you entered it (29 solutions). Marked: your f = 60 Hz gives dV = 43.13. Your inputs: circuit = half-wave, Vp = 169.7 V, f = 60 Hz, R = 500 ohm, C = 0.0001 F.*
+*dV (peak-to-peak ripple) against f (line frequency) from 6 Hz to 600 Hz on a logarithmic axis. One curve for each value of Vp (peak source voltage (after any diode drop)): 169.7 V, 84.85 V, 339.4 V. Other inputs as in the worked example: circuit = half-wave, R = 500.0 ohm, C = 9.999999999999999e-05 F. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 60 Hz, dV = 43.1319 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_capacitor_filter_exact', circuit='half-wave', Vp=169.7, f=60.0, R=500.0, C=0.0001)
@@ -2134,13 +1978,9 @@ $$
 - **Assumes:** commutation finishes within the half-cycle
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Overlap angle in degrees as Vs runs from 138 to 322 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-overlap-live-1)
+![u_deg (overlap angle in degrees) against alpha (firing angle) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-overlap-curve)
 
-*Overlap angle in degrees as Vs runs from 138 to 322 V, every other input as you entered it (41 solutions). Marked: your Vs = 230 V gives u_deg = 7.93. Your inputs: Vs = 230 V, f = 0.05 kHz, Ls = 2 mH, Id = 20 A, alpha = 30 deg.*
-
-![Overlap angle in degrees as f runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-single-phase-overlap-live-2)
-
-*Overlap angle in degrees as f runs from 0.03 to 0.07 kHz, every other input as you entered it (29 solutions). Marked: your f = 0.05 kHz gives u_deg = 7.93. Your inputs: Vs = 230 V, f = 0.05 kHz, Ls = 2 mH, Id = 20 A, alpha = 30 deg.*
+*u_deg (overlap angle in degrees) against alpha (firing angle) from 0 rad to 1.5708 rad. One curve for each value of Vs (RMS source voltage): 230 V, 115 V, 460 V. Other inputs as in the worked example: f = 50.0 Hz, Ls = 0.002 H, Id = 20.0 A. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, alpha = 0.523599 rad, u_deg = 7.93042.*
 
 ```python
 power_electronics_ai999x.solve('pe_single_phase_overlap', Vs=230.0, f=50.0, Ls=0.002, Id=20.0, alpha=0.5235987755982988)
@@ -2189,13 +2029,9 @@ $$
 - **Assumes:** commutation finishes before the next one starts
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Overlap angle in degrees as VLL runs from 240 to 560 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-overlap-live-1)
+![u_deg (overlap angle in degrees) against alpha (firing angle) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-overlap-curve)
 
-*Overlap angle in degrees as VLL runs from 240 to 560 V, every other input as you entered it (41 solutions). Marked: your VLL = 400 V gives u_deg = 5.856. Your inputs: VLL = 400 V, f = 0.05 kHz, Ls = 0.5 mH, Id = 100 A, alpha = 30 deg.*
-
-![Overlap angle in degrees as f runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-three-phase-overlap-live-2)
-
-*Overlap angle in degrees as f runs from 0.03 to 0.07 kHz, every other input as you entered it (29 solutions). Marked: your f = 0.05 kHz gives u_deg = 5.856. Your inputs: VLL = 400 V, f = 0.05 kHz, Ls = 0.5 mH, Id = 100 A, alpha = 30 deg.*
+*u_deg (overlap angle in degrees) against alpha (firing angle) from 0 rad to 1.5708 rad. One curve for each value of VLL (RMS line-to-line voltage): 400 V, 200 V, 800 V. Other inputs as in the worked example: f = 50.0 Hz, Ls = 0.0005 H, Id = 100.0 A. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, alpha = 0.523599 rad, u_deg = 5.85623.*
 
 ```python
 power_electronics_ai999x.solve('pe_three_phase_overlap', VLL=400.0, f=50.0, Ls=0.0005, Id=100.0, alpha=0.5235987755982988)
@@ -2242,13 +2078,9 @@ $$
 - **Assumes:** $V_{1} > 0$, harmonics >= 0
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Total harmonic distortion as V1 runs from 57](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-thd-from-harmonics-live-1)
+![THD (total harmonic distortion) against V1 (RMS value of the fundamental (any unit, the same as the harmonics)) from 115 to 345](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-thd-from-harmonics-curve)
 
-*Total harmonic distortion as V1 runs from 57.5 to 402.5, every other input as you entered it (41 solutions). Marked: your V1 = 230 gives THD = 0.06164. Your inputs: V1 = 230, Vh = 0, 11.5, 0, 6.9, 0, 4.6.*
-
-![Total harmonic distortion as Vh[2] runs from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-thd-from-harmonics-live-2)
-
-*Total harmonic distortion as Vh[2] runs from 2.875 to 20.12, every other input as you entered it (29 solutions). Marked: your Vh[2] = 11.5 gives THD = 0.06164. Your inputs: V1 = 230, Vh = 0, 11.5, 0, 6.9, 0, 4.6.*
+*THD (total harmonic distortion) against V1 (RMS value of the fundamental (any unit, the same as the harmonics)) from 115 to 345. Other inputs as in the worked example: Vh = [0.0, 11.5, 0.0, 6.9, 0.0, 4.6]. 31 points computed by power-electronics-ai999x; marked: the worked example, V1 = 230, THD = 0.0616441.*
 
 ```python
 power_electronics_ai999x.solve('pe_thd_from_harmonics', V1=230.0, Vh=[0.0, 11.5, 0.0, 6.9, 0.0, 4.6])
@@ -2294,17 +2126,13 @@ $$
 - **Assumes:** sinusoidal voltage; $-90  \leq  \phi  \leq  90$ degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![True power factor (PF) over phi from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-power-factor-distortion-field)
+![PF (true power factor) against phi (displacement angle of the fundamental current (lagging positive)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-power-factor-distortion-curve)
 
-*True power factor (PF) over phi from 0 rad to 1.571 rad and THD from 0.02 to 0.98: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, PF = 0.9005. Your inputs: THD = 0.483, phi = 0 deg.*
+*PF (true power factor) against phi (displacement angle of the fundamental current (lagging positive)) from 0 rad to 1.5708 rad. One curve for each value of THD (current total harmonic distortion (a fraction or %)): 0.483, 0.26, 0.74. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, phi = 0 rad, PF = 0.900467.*
 
-![True power factor as THD runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-power-factor-distortion-live-1)
+![PF (true power factor) over phi (displacement angle of the fundamental current (lagging positive)) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-power-factor-distortion-field)
 
-*True power factor as THD runs from 0.1207 to 0.8452, every other input as you entered it (41 solutions). Marked: your THD = 0.483 gives PF = 0.9005. Your inputs: THD = 0.483, phi = 0 deg.*
-
-![True power factor as φ runs from -1 to 1 deg, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-power-factor-distortion-live-2)
-
-*True power factor as φ runs from -1 to 1 deg, every other input as you entered it (29 solutions). Marked: your φ = 0 deg gives PF = 0.9005. Your inputs: THD = 0.483, phi = 0 deg.*
+*PF (true power factor) over phi (displacement angle of the fundamental current (lagging positive)) from 0 rad to 1.5708 rad and THD (current total harmonic distortion (a fraction or %)) from 0.02 to 0.98: each of the 21 × 15 cells is one run of power-electronics-ai999x, shaded by its value (light 3.4972e-12 to dark 0.9998); iso-lines at PF = 0.2, 0.4, 0.6, 0.8. Marked: the worked example, phi = 0 rad, THD = 0.483, PF = 0.900467.*
 
 ```python
 power_electronics_ai999x.solve('pe_power_factor_distortion', THD=0.483, phi=0.0)
@@ -2353,17 +2181,13 @@ $$
 - **Assumes:** $0 < D < 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS value sqrt(D) A (rms) over A from 6 to 18 and D from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pulse-waveform-rms-field)
+![rms (RMS value sqrt(D) A) against D (duty cycle (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pulse-waveform-rms-curve)
 
-*RMS value sqrt(D) A (rms) over A from 6 to 18 and D from 0.02 to 0.98: each of the 221 cells is one computation of the model, shaded by its value (darker is larger; a blank cell: inputs the model refuses). Marked: the inputs given, rms = 6. Your inputs: A = 12, D = 0.25.*
+*rms (RMS value sqrt(D) A) against D (duty cycle (a fraction or %)) from 0.02 to 0.98. One curve for each value of A (pulse amplitude (any unit)): 12, 6, 24. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, D = 0.25, rms = 6.*
 
-![Rms as A runs from 3 to 21, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pulse-waveform-rms-live-1)
+![rms (RMS value sqrt(D) A) over A (pulse amplitude (any unit)) from 6 to 18 and D (duty cycle (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pulse-waveform-rms-field)
 
-*Rms as A runs from 3 to 21, every other input as you entered it (41 solutions). Marked: your A = 12 gives rms = 6. Your inputs: A = 12, D = 0.25.*
-
-![Rms as D runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pulse-waveform-rms-live-2)
-
-*Rms as D runs from 0.0625 to 0.4375, every other input as you entered it (29 solutions). Marked: your D = 0.25 gives rms = 6. Your inputs: A = 12, D = 0.25.*
+*rms (RMS value sqrt(D) A) over A (pulse amplitude (any unit)) from 6 to 18 and D (duty cycle (a fraction or %)) from 0.02 to 0.98: each of the 21 × 15 cells is one run of power-electronics-ai999x, shaded by its value (light 0.848528 to dark 17.8191); iso-lines at rms = 5, 10, 15. Marked: the worked example, A = 12, D = 0.25, rms = 6.*
 
 ```python
 power_electronics_ai999x.solve('pe_pulse_waveform_rms', A=12.0, D=0.25)
@@ -2412,17 +2236,9 @@ $$
 - **Assumes:** n odd, 3..99; ideal switching, no dead time
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS fundamental, RMS output voltage and peak fundamental as Vdc runs from 60 to 140 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-square-wave-inverter-live-1)
+![V1_rms (RMS fundamental) against Vdc (dc input voltage) from 50 V to 150 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-square-wave-inverter-curve)
 
-*RMS fundamental, RMS output voltage and peak fundamental as Vdc runs from 60 to 140 V, every other input as you entered it (41 solutions). Marked: your Vdc = 100 V gives V1_rms = 90.03. Your inputs: Vdc = 100 V, bridge = full-bridge, n = 3.*
-
-![RMS fundamental for every choice of bridge, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-square-wave-inverter-live-2)
-
-*RMS fundamental for every choice of bridge, every other input as you entered it (highlighted: your choice). half-bridge: 45.02; full-bridge: 90.03. Your inputs: Vdc = 100 V, bridge = full-bridge, n = 3.*
-
-![RMS value of harmonic n as n runs from 3 to 7, every other input as you entered it (3 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-square-wave-inverter-live-3)
-
-*RMS value of harmonic n as n runs from 3 to 7, every other input as you entered it (3 solutions). Values in this range where the inputs admit no answer (2 of 5) are left out. Marked: your n = 3 gives Vn_rms = 30.01. Your inputs: Vdc = 100 V, bridge = full-bridge, n = 3.*
+*V1_rms (RMS fundamental) against Vdc (dc input voltage) from 50 V to 150 V. One curve for each value of bridge (half-bridge or full-bridge): full-bridge, half-bridge. Other inputs as in the worked example: n = 3. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Vdc = 100 V, V1_rms = 90.0316 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_square_wave_inverter', Vdc=100.0, bridge='full-bridge', n=3)
@@ -2471,13 +2287,9 @@ $$
 - **Assumes:** $0  \leq  \alpha < 90$ degrees; n odd, 3..99
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS fundamental and RMS output voltage as α runs from 18 to 42 deg, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-quasi-square-inverter-live-1)
+![V1_rms (RMS fundamental) against alpha (zero-voltage interval at each end of a half-cycle) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-quasi-square-inverter-curve)
 
-*RMS fundamental and RMS output voltage as α runs from 18 to 42 deg, every other input as you entered it (41 solutions). Marked: your α = 30 deg gives V1_rms = 77.97. Your inputs: Vdc = 100 V, alpha = 30 deg, n = 3.*
-
-![RMS value of harmonic n as n runs from 3 to 7, every other input as you entered it (3 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-quasi-square-inverter-live-2)
-
-*RMS value of harmonic n as n runs from 3 to 7, every other input as you entered it (3 solutions). Values in this range where the inputs admit no answer (2 of 5) are left out. Marked: your n = 3 gives Vn_rms = 0. Your inputs: Vdc = 100 V, alpha = 30 deg, n = 3.*
+*V1_rms (RMS fundamental) against alpha (zero-voltage interval at each end of a half-cycle) from 0 rad to 1.5708 rad. One curve for each value of Vdc (dc input voltage): 100 V, 50 V, 200 V. Other inputs as in the worked example: n = 3. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, alpha = 0.523599 rad, V1_rms = 77.9697 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_quasi_square_inverter', Vdc=100.0, alpha=0.5235987755982988, n=3)
@@ -2529,13 +2341,9 @@ $$
 - **Assumes:** balanced star load, ideal switching
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![RMS fundamental line voltage as Vdc runs from 360 to 840 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-six-step-inverter-live-1)
+![VLL1_rms (RMS fundamental line voltage) against Vdc (dc-link voltage) from 300 V to 900 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-six-step-inverter-curve)
 
-*RMS fundamental line voltage as Vdc runs from 360 to 840 V, every other input as you entered it (41 solutions). Marked: your Vdc = 600 V gives VLL1_rms = 467.8. Your inputs: Vdc = 600 V, f = 50 Hz.*
-
-![Seventh-harmonic frequency as f runs from 30 to 70 Hz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-six-step-inverter-live-2)
-
-*Seventh-harmonic frequency as f runs from 30 to 70 Hz, every other input as you entered it (29 solutions). Marked: your f = 50 Hz gives f7 = 350. Your inputs: Vdc = 600 V, f = 50 Hz.*
+*VLL1_rms (RMS fundamental line voltage) against Vdc (dc-link voltage) from 300 V to 900 V. Outputs with the same unit drawn together: VLL_rms (RMS line-to-line voltage), Vph_rms (RMS phase voltage), Vph1_rms (RMS fundamental phase voltage). Other inputs as in the worked example: f = 50.0 Hz. 31 points computed by power-electronics-ai999x; marked: the worked example, Vdc = 600 V, VLL1_rms = 467.818 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_six_step_inverter', Vdc=600.0, f=50.0)
@@ -2585,13 +2393,9 @@ $$
 - **Assumes:** $0 < ma  \leq  1$; mf odd, 15..201 (natural sampling)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Peak fundamental of a leg against the dc](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-spwm-fundamental-live-1)
+![V1_leg_peak (peak fundamental of a leg against the dc midpoint) against Vdc (dc-link voltage) from 300 V to 900 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-spwm-fundamental-curve)
 
-*Peak fundamental of a leg against the dc... as Vdc runs from 360 to 840 V, every other input as you entered it (41 solutions). Marked: your Vdc = 600 V gives V1_leg_peak = 240. Your inputs: Vdc = 600 V, ma = 0.8, mf = 21, f1 = 50 Hz.*
-
-![Peak fundamental of a leg against the dc](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-spwm-fundamental-live-2)
-
-*Peak fundamental of a leg against the dc... as ma runs from 0.2 to 0.9714, every other input as you entered it (19 solutions). Marked: your ma = 0.8 gives V1_leg_peak = 240. Your inputs: Vdc = 600 V, ma = 0.8, mf = 21, f1 = 50 Hz.*
+*V1_leg_peak (peak fundamental of a leg against the dc midpoint) against Vdc (dc-link voltage) from 300 V to 900 V. One curve for each value of ma (amplitude modulation index): 0.8, 0.4. Other inputs as in the worked example: mf = 21, f1 = 50.0 Hz. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Vdc = 600 V, V1_leg_peak = 240 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_spwm_fundamental', Vdc=600.0, ma=0.8, mf=21, f1=50.0)
@@ -2641,13 +2445,9 @@ $$
 - **Assumes:** inside the hexagon $(T_{1} + T_{2}  \leq  Ts)$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Dwell time of the first active vector as Vdc runs from 360 to 840 V, every other input as you entered it (41 solutions)](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-space-vector-times-live-1.svg)
+![T1 (dwell time of the first active vector) against theta (reference vector angle) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-space-vector-times-curve)
 
-*Dwell time of the first active vector as Vdc runs from 360 to 840 V, every other input as you entered it (41 solutions). Marked: your Vdc = 600 V gives T1 = 33.12 us. Your inputs: Vref = 200 V, theta = 25 deg, Vdc = 600 V, fs = 10 kHz.*
-
-![Dwell time of the first active vector as Vref runs from 120 to 280 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-space-vector-times-live-2)
-
-*Dwell time of the first active vector as Vref runs from 120 to 280 V, every other input as you entered it (29 solutions). Marked: your Vref = 200 V gives T1 = 33.12 us. Your inputs: Vref = 200 V, theta = 25 deg, Vdc = 600 V, fs = 10 kHz.*
+*T1 (dwell time of the first active vector) against theta (reference vector angle) from 0 rad to 1.5708 rad. One curve for each value of fs (switching (sampling) frequency): 10000 Hz, 5000 Hz, 20000 Hz. Other inputs as in the worked example: Vref = 200.0 V, Vdc = 600.0 V. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, theta = 0.436332 rad, T1 = 3.3115e-05 s.*
 
 ```python
 power_electronics_ai999x.solve('pe_space_vector_times', Vref=200.0, theta=0.4363323129985824, Vdc=600.0, fs=10000.0)
@@ -2695,13 +2495,9 @@ $$
 - **Assumes:** td $fs < 0.5$; the current does not change sign within a switching period
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Error in percent of the wanted fundamental as V1 runs from 150 to 350 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dead-time-error-live-1)
+![dV_avg (average voltage error td fs Vdc) against Vdc (dc-link voltage) from 300 V to 900 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dead-time-error-curve)
 
-*Error in percent of the wanted fundamental as V1 runs from 150 to 350 V, every other input as you entered it (41 solutions). Marked: your V1 = 250 V gives dV1_pct = 6.112. Your inputs: Vdc = 600 V, td = 2000 ns, fs = 10 kHz, V1 = 250 V.*
-
-![Average voltage error td fs Vdc as Vdc runs from 360 to 840 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dead-time-error-live-2)
-
-*Average voltage error td fs Vdc as Vdc runs from 360 to 840 V, every other input as you entered it (29 solutions). Marked: your Vdc = 600 V gives dV_avg = 12. Your inputs: Vdc = 600 V, td = 2000 ns, fs = 10 kHz, V1 = 250 V.*
+*dV_avg (average voltage error td fs Vdc) against Vdc (dc-link voltage) from 300 V to 900 V. One curve for each value of td (dead time): 2.0000e-06 s, 1.0000e-06 s, 4.0000e-06 s. Other inputs as in the worked example: fs = 10000.0 Hz, V1 = 250.0 V. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Vdc = 600 V, dV_avg = 12 V.*
 
 ```python
 power_electronics_ai999x.solve('pe_dead_time_error', Vdc=600.0, td=2e-06, fs=10000.0, V1=250.0)
@@ -2750,13 +2546,9 @@ $$
 - **Assumes:** steady state, ideal switches with antiparallel diodes
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Peak load current as Vdc runs from 60 to 140 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-inverter-rl-load-current-live-1)
+![I_max (peak load current) against f (output frequency) from 6 Hz to 600 Hz on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-inverter-rl-load-current-curve)
 
-*Peak load current as Vdc runs from 60 to 140 V, every other input as you entered it (41 solutions). Marked: your Vdc = 100 V gives I_max = 9.311. Your inputs: Vdc = 100 V, f = 60 Hz, R = 10 ohm, L = 25 mH.*
-
-![Peak load current as f runs from 36 to 84 Hz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-inverter-rl-load-current-live-2)
-
-*Peak load current as f runs from 36 to 84 Hz, every other input as you entered it (29 solutions). Marked: your f = 60 Hz gives I_max = 9.311. Your inputs: Vdc = 100 V, f = 60 Hz, R = 10 ohm, L = 25 mH.*
+*I_max (peak load current) against f (output frequency) from 6 Hz to 600 Hz on a logarithmic axis. One curve for each value of Vdc (dc input voltage): 100 V, 50 V, 200 V. Other inputs as in the worked example: R = 10.0 ohm, L = 0.025 H. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 60 Hz, I_max = 9.3111 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_inverter_rl_load_current', Vdc=100.0, f=60.0, R=10.0, L=0.025)
@@ -2808,13 +2600,9 @@ $$
 - **Assumes:** $0 < M  \leq  1$, sinusoidal current, switching frequency far above the output frequency
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Conduction loss of one IGBT as Ip runs from 60 to 140 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-igbt-inverter-conduction-losses-live-1)
+![P_igbt (conduction loss of one IGBT) against Ip (peak phase current) from 10 A to 1000 A on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-igbt-inverter-conduction-losses-curve)
 
-*Conduction loss of one IGBT as Ip runs from 60 to 140 A, every other input as you entered it (41 solutions). Marked: your Ip = 100 A gives P_igbt = 43.86. Your inputs: Ip = 100 A, M = 0.9, phi = 30 deg, Vce0 = 0.9 V, rce = 0.01 ohm, VF0 = 0.8 V, rF = 0.008 ohm.*
-
-![Conduction loss of one IGBT as M runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-igbt-inverter-conduction-losses-live-2)
-
-*Conduction loss of one IGBT as M runs from 0.225 to 0.9964, every other input as you entered it (17 solutions). Marked: your M = 0.9 gives P_igbt = 43.86. Your inputs: Ip = 100 A, M = 0.9, phi = 30 deg, Vce0 = 0.9 V, rce = 0.01 ohm, VF0 = 0.8 V, rF = 0.008 ohm.*
+*P_igbt (conduction loss of one IGBT) against Ip (peak phase current) from 10 A to 1000 A on a logarithmic axis. Outputs with the same unit drawn together: P_diode (conduction loss of one diode), P_switch_pair (one IGBT plus one diode), P_leg (conduction loss of a leg (two of each)). Other inputs as in the worked example: M = 0.9, phi = 0.5235987755982988 rad, Vce0 = 0.9 V, rce = 0.01 ohm, VF0 = 0.8 V, rF = 0.008 ohm. 41 points computed by power-electronics-ai999x; marked: the worked example, Ip = 100 A, P_igbt = 43.8624 W.*
 
 ```python
 power_electronics_ai999x.solve('pe_igbt_inverter_conduction_losses', Ip=100.0, M=0.9, phi=0.5235987755982988, Vce0=0.9, rce=0.01, VF0=0.8, rF=0.008)
@@ -2867,13 +2655,9 @@ $$
 - **Assumes:** continuous armature current; constant field
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Speed as Vs runs from 132 to 308 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-motor-chopper-drive-live-1)
+![omega (speed) against K (motor constant K = Ke = Kt) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-motor-chopper-drive-curve)
 
-*Speed as Vs runs from 132 to 308 V, every other input as you entered it (41 solutions). Marked: your Vs = 220 V gives ω = 101.7. Your inputs: Vs = 220 V, D = 0.6, Ra = 0.5 ohm, K = 1.2 V*s/rad, TL = 24 N*m.*
-
-![Speed as D runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-motor-chopper-drive-live-2)
-
-*Speed as D runs from 0.15 to 0.9857, every other input as you entered it (27 solutions). Marked: your D = 0.6 gives ω = 101.7. Your inputs: Vs = 220 V, D = 0.6, Ra = 0.5 ohm, K = 1.2 V*s/rad, TL = 24 N*m.*
+*omega (speed) against K (motor constant K = Ke = Kt) from 0.12 V*s/rad to 12 V*s/rad on a logarithmic axis. One curve for each value of Vs (dc supply voltage): 220 V, 110 V, 440 V. Other inputs as in the worked example: D = 0.6, Ra = 0.5 ohm, TL = 24.0 N*m. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, K = 1.2 V*s/rad, omega = 101.667 rad/s.*
 
 ```python
 power_electronics_ai999x.solve('pe_dc_motor_chopper_drive', Vs=220.0, D=0.6, Ra=0.5, K=1.2, TL=24.0)
@@ -2927,13 +2711,9 @@ $$
 - **Assumes:** ideal trapezoidal EMF and block currents; winding inductance and commutation neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Time between commutations as p runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bldc-six-step-live-1)
+![omega (speed) against Keph (phase back-EMF constant (flat top)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bldc-six-step-curve)
 
-*Time between commutations as p runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your p = 4 gives t_commutation = 0.7192 ms. Your inputs: Vdc = 48 V, D = 0.8, Rph = 0.1 ohm, Keph = 0.05 V*s/rad, I = 10 A, p = 4.*
-
-![Speed and no-load speed as Vdc runs from 28](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bldc-six-step-live-2)
-
-*Speed and no-load speed as Vdc runs from 28.8 to 67.2 V, every other input as you entered it (29 solutions). Marked: your Vdc = 48 V gives ω = 364. Your inputs: Vdc = 48 V, D = 0.8, Rph = 0.1 ohm, Keph = 0.05 V*s/rad, I = 10 A, p = 4.*
+*omega (speed) against Keph (phase back-EMF constant (flat top)) from 0.025 V*s/rad to 0.075 V*s/rad. One curve for each value of Vdc (dc bus voltage): 48 V, 24 V, 96 V. Other inputs as in the worked example: D = 0.8, Rph = 0.1 ohm, I = 10.0 A, p = 4. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Keph = 0.05 V*s/rad, omega = 364 rad/s.*
 
 ```python
 power_electronics_ai999x.solve('pe_bldc_six_step', Vdc=48.0, D=0.8, Rph=0.1, Keph=0.05, I=10.0, p=4)
@@ -2987,21 +2767,13 @@ $$
 - **Assumes:** continuous armature current
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Motoring or reverse (mode) over firing angle (alpha) from 0 rad to 3](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-drive-controlled-rectifier-decision)
+![motoring or reverse (mode) over alpha (firing angle) from 0 rad to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-drive-controlled-rectifier-decision)
 
-*Motoring or reverse (mode) over firing angle (alpha) from 0 rad to 3.142 rad and RMS supply voltage (Vs) from 4.6 V to 460 V: each of the 270 cells is one computation of the model, coloured by the verdict it returned (motoring: 125 cells, reverse (regenerating against an active load): 145 cells). Marked: the inputs given, mode = motoring. In SI units: omega = 136.4 rad/s. Your inputs: converter = single-phase, Vs = 230 V, alpha = 0.7853981633974483 rad, Ra = 1 ohm, K = 1 V*s/rad, Ia = 10 A.*
+*motoring or reverse (mode) over alpha (firing angle) from 0 rad to 1.5708 rad and Vs (RMS supply voltage (line-to-line for three-phase)) from 23 V to 2300 V (logarithmic vertical axis): each of the 31 × 21 cells is one run of power-electronics-ai999x, coloured by the verdict it returned, motoring: 595 cells, reverse (regenerating against an active load): 56 cells. Other inputs as in the worked example: converter = single-phase, Ra = 1.0 ohm, K = 1.0 V*s/rad, Ia = 10.0 A. Marked: the worked example, alpha = 0.785398 rad, Vs = 230 V → motoring.*
 
-![Speed as Vs runs from 138 to 322 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-drive-controlled-rectifier-live-1)
+![omega (speed) against K (motor constant) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-drive-controlled-rectifier-curve)
 
-*Speed as Vs runs from 138 to 322 V, every other input as you entered it (41 solutions). Marked: your Vs = 230 V gives ω = 136.4. Your inputs: converter = single-phase, Vs = 230 V, alpha = 0.7853981633974483 rad, Ra = 1 ohm, K = 1 V*s/rad, Ia = 10 A.*
-
-![Speed for every choice of converter, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-drive-controlled-rectifier-live-2)
-
-*Speed for every choice of converter, every other input as you entered it (highlighted: your choice). single-phase: 136.4; three-phase: 209.6. Your inputs: converter = single-phase, Vs = 230 V, alpha = 0.7853981633974483 rad, Ra = 1 ohm, K = 1 V*s/rad, Ia = 10 A.*
-
-![Speed as K runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-drive-controlled-rectifier-live-3)
-
-*Speed as K runs from 0.6 to 1.4 V*s/rad, every other input as you entered it (25 solutions). Marked: your K = 1 V*s/rad gives ω = 136.4. Your inputs: converter = single-phase, Vs = 230 V, alpha = 0.7853981633974483 rad, Ra = 1 ohm, K = 1 V*s/rad, Ia = 10 A.*
+*omega (speed) against K (motor constant) from 0.5 V*s/rad to 1.5 V*s/rad. One curve for each value of Vs (RMS supply voltage (line-to-line for three-phase)): 230 V, 115 V, 460 V. Other inputs as in the worked example: converter = single-phase, alpha = 0.7853981633974483 rad, Ra = 1.0 ohm, Ia = 10.0 A. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, K = 1 V*s/rad, omega = 136.423 rad/s.*
 
 ```python
 power_electronics_ai999x.solve('pe_dc_drive_controlled_rectifier', converter='single-phase', Vs=230.0, alpha=0.7853981633974483, Ra=1.0, K=1.0, Ia=10.0)
@@ -3054,13 +2826,9 @@ $$
 - **Assumes:** $Ea > (1 - D)$ Vs; continuous armature current
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Armature (braking) current as K runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-regenerative-braking-chopper-live-1)
+![Ia (armature (braking) current) against Ra (armature resistance) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-regenerative-braking-chopper-curve)
 
-*Armature (braking) current as K runs from 0.74 to 1.4 V*s/rad, every other input as you entered it (34 solutions). Marked: your K = 1 V*s/rad gives Ia = 80. Your inputs: Vs = 220 V, D = 0.5, Ra = 0.5 ohm, K = 1 V*s/rad, omega = 150 rad/s.*
-
-![Armature (braking) current as ω runs from 111](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-regenerative-braking-chopper-live-2)
-
-*Armature (braking) current as ω runs from 111.4 to 210 rad/s, every other input as you entered it (24 solutions). Marked: your ω = 150 rad/s gives Ia = 80. Your inputs: Vs = 220 V, D = 0.5, Ra = 0.5 ohm, K = 1 V*s/rad, omega = 150 rad/s.*
+*Ia (armature (braking) current) against Ra (armature resistance) from 0.25 ohm to 0.75 ohm. One curve for each value of K (motor constant): 1 V*s/rad, 2 V*s/rad. Other inputs as in the worked example: Vs = 220.0 V, D = 0.5, omega = 150.0 rad/s. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Ra = 0.5 ohm, Ia = 80 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_regenerative_braking_chopper', Vs=220.0, D=0.5, Ra=0.5, K=1.0, omega=150.0)
@@ -3111,13 +2879,9 @@ $$
 - **Assumes:** continuous conduction (I_min > 0); constant speed (constant back EMF) over a period
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Peak-to-peak ripple as D runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-motor-armature-ripple-live-1)
+![dI (peak-to-peak ripple) against D (duty cycle (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-motor-armature-ripple-curve)
 
-*Peak-to-peak ripple as D runs from 0.4813 to 0.875, every other input as you entered it (22 solutions). Marked: your D = 0.5 gives dI = 5.499. Your inputs: Vs = 220 V, D = 0.5, fs = 1 kHz, Ra = 1 ohm, La = 10 mH, Ea = 100 V.*
-
-![Peak-to-peak ripple as Vs runs from 207](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dc-motor-armature-ripple-live-2)
-
-*Peak-to-peak ripple as Vs runs from 207.4 to 308 V, every other input as you entered it (17 solutions). Marked: your Vs = 220 V gives dI = 5.499. Your inputs: Vs = 220 V, D = 0.5, fs = 1 kHz, Ra = 1 ohm, La = 10 mH, Ea = 100 V.*
+*dI (peak-to-peak ripple) against D (duty cycle (a fraction or %)) from 0.25 to 0.75. One curve for each value of Vs (dc supply voltage): 220 V, 440 V. Other inputs as in the worked example: fs = 1000.0 Hz, Ra = 1.0 ohm, La = 0.01 H, Ea = 100.0 V. 17 points per curve computed by power-electronics-ai999x; marked: the worked example, D = 0.5, dI = 5.49885 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_dc_motor_armature_ripple', Vs=220.0, D=0.5, fs=1000.0, Ra=1.0, La=0.01, Ea=100.0)
@@ -3169,13 +2933,9 @@ $$
 - **Assumes:** f <= f_rated; linear torque-slip region (T_ratio <= 1.5); stator resistance drop neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rotor speed in rpm as poles runs from 2 to 4, every other input as you entered it (2 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-induction-motor-vf-live-1)
+![n (rotor speed in rpm) against f (operating frequency) from 15 Hz to 45 Hz](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-induction-motor-vf-curve)
 
-*Rotor speed in rpm as poles runs from 2 to 4, every other input as you entered it (2 solutions). Values in this range where the inputs admit no answer (1 of 3) are left out. Marked: your poles = 4 gives n = 850. Your inputs: V_rated = 400 V, f_rated = 50 Hz, poles = 4, n_rated = 1450, f = 30 Hz, T_ratio = 1.*
-
-![Rotor speed in rpm as f_rated runs from 48](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-induction-motor-vf-live-2)
-
-*Rotor speed in rpm as f_rated runs from 48.57 to 70 Hz, every other input as you entered it (16 solutions). Marked: your f_rated = 50 Hz gives n = 850. Your inputs: V_rated = 400 V, f_rated = 50 Hz, poles = 4, n_rated = 1450, f = 30 Hz, T_ratio = 1.*
+*n (rotor speed in rpm) against f (operating frequency) from 15 Hz to 45 Hz. Other inputs as in the worked example: V_rated = 400.0 V, f_rated = 50.0 Hz, poles = 4, n_rated = 1450.0, T_ratio = 1.0. 31 points computed by power-electronics-ai999x; marked: the worked example, f = 30 Hz, n = 850.*
 
 ```python
 power_electronics_ai999x.solve('pe_induction_motor_vf', V_rated=400.0, f_rated=50.0, poles=4, n_rated=1450.0, f=30.0, T_ratio=1.0)
@@ -3234,13 +2994,9 @@ $$
 - **Assumes:** steady state, sinusoidal machine, iron loss neglected; amplitude-invariant transform
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Electromagnetic torque as iq runs from 36 to 84 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-dq-model-live-1)
+![Te (electromagnetic torque) against Lq (q-axis inductance) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-dq-model-curve)
 
-*Electromagnetic torque as iq runs from 36 to 84 A, every other input as you entered it (41 solutions). Marked: your iq = 60 A gives Te = 33.12. Your inputs: Rs = 0.05 ohm, Ld = 0.4 mH, Lq = 1 mH, psi_f = 80 mWb, p = 4, id = -20 A, iq = 60 A, omega_m = 300 rad/s.*
-
-![Electromagnetic torque as p runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-dq-model-live-2)
-
-*Electromagnetic torque as p runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your p = 4 gives Te = 33.12. Your inputs: Rs = 0.05 ohm, Ld = 0.4 mH, Lq = 1 mH, psi_f = 80 mWb, p = 4, id = -20 A, iq = 60 A, omega_m = 300 rad/s.*
+*Te (electromagnetic torque) against Lq (q-axis inductance) from 0.0005 H to 0.0015 H. One curve for each value of iq (q-axis current): 60 A, 30 A, 120 A. Other inputs as in the worked example: Rs = 0.05 ohm, Ld = 0.0004 H, psi_f = 0.08 Wb, p = 4, id = -20.0 A, omega_m = 300.0 rad/s. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Lq = 0.001 H, Te = 33.12 N*m.*
 
 ```python
 power_electronics_ai999x.solve('pe_pmsm_dq_model', Rs=0.05, Ld=0.0004, Lq=0.001, psi_f=0.08, p=4, id=-20.0, iq=60.0, omega_m=300.0)
@@ -3291,13 +3047,9 @@ $$
 - **Assumes:** $Lq > Ld$; magnetic saturation neglected
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![D-axis current and q-axis current as Is runs from 60 to 140 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-mtpa-live-1)
+![id (d-axis current (negative)) against Is (current magnitude (peak)) from 10 A to 1000 A on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-mtpa-curve)
 
-*D-axis current and q-axis current as Is runs from 60 to 140 A, every other input as you entered it (41 solutions). Marked: your Is = 100 A gives id = -44.84. Your inputs: Ld = 0.4 mH, Lq = 1 mH, psi_f = 80 mWb, p = 4, Is = 100 A.*
-
-![D-axis current and q-axis current as Lq runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-mtpa-live-2)
-
-*D-axis current and q-axis current as Lq runs from 0.6 to 1.4 mH, every other input as you entered it (29 solutions). Marked: your Lq = 1 mH gives id = -44.84. Your inputs: Ld = 0.4 mH, Lq = 1 mH, psi_f = 80 mWb, p = 4, Is = 100 A.*
+*id (d-axis current (negative)) against Is (current magnitude (peak)) from 10 A to 1000 A on a logarithmic axis. Outputs with the same unit drawn together: iq (q-axis current). Other inputs as in the worked example: Ld = 0.0004 H, Lq = 0.001 H, psi_f = 0.08 Wb, p = 4. 41 points computed by power-electronics-ai999x; marked: the worked example, Is = 100 A, id = -44.8403 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_pmsm_mtpa', Ld=0.0004, Lq=0.001, psi_f=0.08, p=4, Is=100.0)
@@ -3351,13 +3103,9 @@ $$
 - **Assumes:** $psi_f > Ls$ Imax (finite maximum speed); omega < omega_max; $Rs = 0$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Available torque at omega as p runs from 1 to 8, every other input as you entered it (8 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-field-weakening-live-1)
+![T (available torque at omega) against p (pole pairs) from 1 to 12](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-field-weakening-curve)
 
-*Available torque at omega as p runs from 1 to 8, every other input as you entered it (8 solutions). Marked: your p = 4 gives T = 29.96. Your inputs: Ls = 1 mH, psi_f = 100 mWb, p = 4, Imax = 60 A, Vmax = 200 V, omega = 600 rad/s.*
-
-![Available torque at omega as Vmax runs from 120 to 280 V, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-pmsm-field-weakening-live-2)
-
-*Available torque at omega as Vmax runs from 120 to 280 V, every other input as you entered it (29 solutions). Marked: your Vmax = 200 V gives T = 29.96. Your inputs: Ls = 1 mH, psi_f = 100 mWb, p = 4, Imax = 60 A, Vmax = 200 V, omega = 600 rad/s.*
+*T (available torque at omega) against p (pole pairs) from 1 to 12. Other inputs as in the worked example: Ls = 0.001 H, psi_f = 0.1 Wb, Imax = 60.0 A, Vmax = 200.0 V, omega = 600.0 rad/s. 8 points computed by power-electronics-ai999x; marked: the worked example, p = 4, T = 29.9555 N*m.*
 
 ```python
 power_electronics_ai999x.solve('pe_pmsm_field_weakening', Ls=0.001, psi_f=0.1, p=4, Imax=60.0, Vmax=200.0, omega=600.0)
@@ -3406,13 +3154,9 @@ $$
 - **Assumes:** linear temperature model
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Conduction loss at the junction temperature as Irms runs from 12 to 28 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-mosfet-conduction-loss-live-1)
+![P (conduction loss at the junction temperature) against Irms (RMS drain current) from 10 A to 30 A](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-mosfet-conduction-loss-curve)
 
-*Conduction loss at the junction temperature as Irms runs from 12 to 28 A, every other input as you entered it (41 solutions). Marked: your Irms = 20 A gives P = 6.8. Your inputs: Rds25 = 0.01 ohm, alpha = 0.007, Tj = 125 degC, Irms = 20 A.*
-
-![Conduction loss at the junction temperature as Rds25 runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-mosfet-conduction-loss-live-2)
-
-*Conduction loss at the junction temperature as Rds25 runs from 0.006 to 0.014 ohm, every other input as you entered it (29 solutions). Marked: your Rds25 = 0.01 ohm gives P = 6.8. Your inputs: Rds25 = 0.01 ohm, alpha = 0.007, Tj = 125 degC, Irms = 20 A.*
+*P (conduction loss at the junction temperature) against Irms (RMS drain current) from 10 A to 30 A. One curve for each value of alpha (temperature coefficient of the on-resistance per kelvin): 0.007, 0.26, 0.74. Other inputs as in the worked example: Rds25 = 0.01 ohm, Tj = 398.15 K. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Irms = 20 A, P = 6.8 W.*
 
 ```python
 power_electronics_ai999x.solve('pe_mosfet_conduction_loss', Rds25=0.01, alpha=0.007, Tj=398.15, Irms=20.0)
@@ -3465,13 +3209,9 @@ $$
 - **Assumes:** clamped inductive load, linear transitions
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Switching loss as V runs from 240 to 560 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-switching-loss-live-1)
+![P_sw (switching loss) against V (blocking (dc bus) voltage) from 200 V to 600 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-switching-loss-curve)
 
-*Switching loss as V runs from 240 to 560 V, every other input as you entered it (41 solutions). Marked: your V = 400 V gives P_sw = 16. Your inputs: V = 400 V, I = 10 A, tr = 30 ns, tf = 50 ns, fs = 100 kHz, Coss = 100 pF.*
-
-![Switching loss as fs runs from 60 to 140 kHz, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-switching-loss-live-2)
-
-*Switching loss as fs runs from 60 to 140 kHz, every other input as you entered it (29 solutions). Marked: your fs = 100 kHz gives P_sw = 16. Your inputs: V = 400 V, I = 10 A, tr = 30 ns, tf = 50 ns, fs = 100 kHz, Coss = 100 pF.*
+*P_sw (switching loss) against V (blocking (dc bus) voltage) from 200 V to 600 V. One curve for each value of I (switched current): 10 A, 5 A, 20 A. Other inputs as in the worked example: tr = 3.0000000000000004e-08 s, tf = 5.0000000000000004e-08 s, fs = 100000.0 Hz, Coss = 1e-10 F. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, V = 400 V, P_sw = 16 W.*
 
 ```python
 power_electronics_ai999x.solve('pe_switching_loss', V=400.0, I=10.0, tr=3e-08, tf=5e-08, fs=100000.0, Coss=1e-10)
@@ -3520,13 +3260,9 @@ $$
 - **Assumes:** the gate fully charges and discharges every cycle
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Gate-drive power Qg V fs as Qg runs from 30 to 70 nC, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-gate-drive-power-live-1)
+![P_drive (gate-drive power Qg V fs) against Qg (total gate charge at the drive voltage) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-gate-drive-power-curve)
 
-*Gate-drive power Qg V fs as Qg runs from 30 to 70 nC, every other input as you entered it (41 solutions). Marked: your Qg = 50 nC gives P_drive = 0.12. Your inputs: Qg = 50 nC, Vdrv = 12 V, fs = 200 kHz, Rg = 5 ohm.*
-
-![Gate-drive power Qg V fs as Vdrv runs from 7](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-gate-drive-power-live-2)
-
-*Gate-drive power Qg V fs as Vdrv runs from 7.2 to 16.8 V, every other input as you entered it (29 solutions). Marked: your Vdrv = 12 V gives P_drive = 0.12. Your inputs: Qg = 50 nC, Vdrv = 12 V, fs = 200 kHz, Rg = 5 ohm.*
+*P_drive (gate-drive power Qg V fs) against Qg (total gate charge at the drive voltage) from 2.5000e-08 C to 7.5000e-08 C. One curve for each value of Vdrv (gate-drive voltage swing): 12 V, 6 V, 24 V. Other inputs as in the worked example: fs = 200000.0 Hz, Rg = 5.0 ohm. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Qg = 5.0000e-08 C, P_drive = 0.12 W.*
 
 ```python
 power_electronics_ai999x.solve('pe_gate_drive_power', Qg=5e-08, Vdrv=12.0, fs=200000.0, Rg=5.0)
@@ -3580,13 +3316,9 @@ $$
 - **Assumes:** triangular recovery current; diode voltage rises linearly during tb
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Recovered charge as Irm runs from 6 to 14 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-diode-reverse-recovery-live-1)
+![Qrr (recovered charge) against Irm (peak reverse-recovery current) from 5 A to 15 A](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-diode-reverse-recovery-curve)
 
-*Recovered charge as Irm runs from 6 to 14 A, every other input as you entered it (41 solutions). Marked: your Irm = 10 A gives Qrr = 5e-07. Your inputs: Irm = 10 A, trr = 100 ns, S = 1, Vr = 400 V, fs = 100 kHz.*
-
-![Recovered charge as trr runs from 60 to 140 ns, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-diode-reverse-recovery-live-2)
-
-*Recovered charge as trr runs from 60 to 140 ns, every other input as you entered it (29 solutions). Marked: your trr = 100 ns gives Qrr = 5e-07. Your inputs: Irm = 10 A, trr = 100 ns, S = 1, Vr = 400 V, fs = 100 kHz.*
+*Qrr (recovered charge) against Irm (peak reverse-recovery current) from 5 A to 15 A. One curve for each value of trr (reverse-recovery time): 1.0000e-07 s, 5.0000e-08 s, 2.0000e-07 s. Other inputs as in the worked example: S = 1.0, Vr = 400.0 V, fs = 100000.0 Hz. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Irm = 10 A, Qrr = 5.0000e-07 C.*
 
 ```python
 power_electronics_ai999x.solve('pe_diode_reverse_recovery', Irm=10.0, trr=1e-07, S=1.0, Vr=400.0, fs=100000.0)
@@ -3633,21 +3365,13 @@ $$
 - **Assumes:** static sharing (on-resistance only)
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The two-device values as arrows from the origin: the on-resistances R = (10, 12) as given; returned by the model: currents = (21](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-parallel-mosfet-sharing-vectors)
+![The plane vectors of the worked example as arrows from the origin: input R = (10, 12); returned by power-electronics-ai999x: currents = (21](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-parallel-mosfet-sharing-vectors)
 
-*The two-device values as arrows from the origin: the on-resistances R = (10, 12) as given; returned by the model: currents = (21.82, 18.18) A and losses = (4.76, 3.967) W; also returned P_total = 8.727 W, imbalance = 1.091. Your inputs: R = 10, 12, I = 40 A.*
+*The plane vectors of the worked example as arrows from the origin: input R = (10, 12); returned by power-electronics-ai999x: currents = (21.8182, 18.1818), losses = (4.76033, 3.96694); also returned P_total = 8.72727, imbalance = 1.09091. Other inputs: I = 40.0 A. Marked: the tip of each returned vector.*
 
-![Total conduction loss as I runs from 24 to 56 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-parallel-mosfet-sharing-live-1)
+![P_total (total conduction loss) against I (total current) from 20 A to 60 A](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-parallel-mosfet-sharing-curve)
 
-*Total conduction loss as I runs from 24 to 56 A, every other input as you entered it (41 solutions). Marked: your I = 40 A gives P_total = 8.727. Your inputs: R = 10, 12, I = 40 A.*
-
-![Every entry of currents as computed for your inputs (2 entries: 21](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-parallel-mosfet-sharing-live-2)
-
-*Every entry of currents as computed for your inputs (2 entries: 21.82, 18.18). Your inputs: R = 10, 12, I = 40 A.*
-
-![Total conduction loss as R[1] runs from 2 to 30, every other input as you entered it (15 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-parallel-mosfet-sharing-live-3)
-
-*Total conduction loss as R[1] runs from 2 to 30, every other input as you entered it (15 solutions). Marked: your R[1] = 10 gives P_total = 8.727. Your inputs: R = 10, 12, I = 40 A.*
+*P_total (total conduction loss) against I (total current) from 20 A to 60 A. Other inputs as in the worked example: R = [10.0, 12.0]. 31 points computed by power-electronics-ai999x; marked: the worked example, I = 40 A, P_total = 8.72727 W.*
 
 ```python
 power_electronics_ai999x.solve('pe_parallel_mosfet_sharing', R=[10.0, 12.0], I=40.0)
@@ -3696,13 +3420,9 @@ $$
 - **Assumes:** the capacitor recharges fully while the low side is on
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Smallest bootstrap capacitance and tenfold margin as dV runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bootstrap-capacitor-live-1)
+![C_min (smallest bootstrap capacitance) against dV (allowed bootstrap droop) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bootstrap-capacitor-curve)
 
-*Smallest bootstrap capacitance and tenfold margin as dV runs from 0.3 to 0.7 V, every other input as you entered it (41 solutions). Marked: your dV = 0.5 V gives C_min = 0.1236 uF. Your inputs: Qg = 60 nC, Ileak = 200 uA, fs = 100 kHz, Dmax = 0.9, dV = 0.5 V.*
-
-![Smallest bootstrap capacitance and tenfold margin as Qg runs from 36 to 84 nC, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-bootstrap-capacitor-live-2)
-
-*Smallest bootstrap capacitance and tenfold margin as Qg runs from 36 to 84 nC, every other input as you entered it (29 solutions). Marked: your Qg = 60 nC gives C_min = 0.1236 uF. Your inputs: Qg = 60 nC, Ileak = 200 uA, fs = 100 kHz, Dmax = 0.9, dV = 0.5 V.*
+*C_min (smallest bootstrap capacitance) against dV (allowed bootstrap droop) from 0.25 V to 0.75 V. One curve for each value of Qg (high-side gate charge): 6.0000e-08 C, 3.0000e-08 C, 1.2000e-07 C. Other inputs as in the worked example: Ileak = 0.00019999999999999998 A, fs = 100000.0 Hz, Dmax = 0.9. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, dV = 0.5 V, C_min = 1.2360e-07 F.*
 
 ```python
 power_electronics_ai999x.solve('pe_bootstrap_capacitor', Qg=6e-08, Ileak=0.0002, fs=100000.0, Dmax=0.9, dV=0.5)
@@ -3754,13 +3474,9 @@ $$
 - **Assumes:** linear current fall; the snubber capacitor discharges fully during the on-time
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Snubber capacitance as I runs from 6 to 14 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-turnoff-snubber-live-1)
+![Cs (snubber capacitance) against V (bus voltage) from 150 V to 450 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-turnoff-snubber-curve)
 
-*Snubber capacitance as I runs from 6 to 14 A, every other input as you entered it (41 solutions). Marked: your I = 10 A gives Cs = 1.667 nF. Your inputs: I = 10 A, V = 300 V, tf = 100 ns, fs = 50 kHz.*
-
-![Snubber capacitance as tf runs from 60 to 140 ns, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-turnoff-snubber-live-2)
-
-*Snubber capacitance as tf runs from 60 to 140 ns, every other input as you entered it (29 solutions). Marked: your tf = 100 ns gives Cs = 1.667 nF. Your inputs: I = 10 A, V = 300 V, tf = 100 ns, fs = 50 kHz.*
+*Cs (snubber capacitance) against V (bus voltage) from 150 V to 450 V. One curve for each value of I (switched (load) current): 10 A, 5 A, 20 A. Other inputs as in the worked example: tf = 1.0000000000000001e-07 s, fs = 50000.0 Hz. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, V = 300 V, Cs = 1.6667e-09 F.*
 
 ```python
 power_electronics_ai999x.solve('pe_turnoff_snubber', I=10.0, V=300.0, tf=1e-07, fs=50000.0)
@@ -3812,13 +3528,9 @@ $$
 - **Assumes:** $f_{1} < f_{0}$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rs as f0 runs from 3e+04 to 7e+04 kHz, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rc-snubber-ringing-live-1)
+![Rs (snubber resistance sqrt(Lp/Cp)) against f1 (ringing frequency with the added capacitor) from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rc-snubber-ringing-curve)
 
-*Rs as f0 runs from 3e+04 to 7e+04 kHz, every other input as you entered it (41 solutions). Marked: your f0 = 5e+04 kHz gives Rs = 31.83. Your inputs: f0 = 50000 kHz, f1 = 25000 kHz, Cadd = 300 pF, k = 4, V = 48 V, fs = 500 kHz.*
-
-![Rs as f1 runs from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-rc-snubber-ringing-live-2)
-
-*Rs as f1 runs from 1.5e+04 to 3.5e+04 kHz, every other input as you entered it (29 solutions). Marked: your f1 = 2.5e+04 kHz gives Rs = 31.83. Your inputs: f0 = 50000 kHz, f1 = 25000 kHz, Cadd = 300 pF, k = 4, V = 48 V, fs = 500 kHz.*
+*Rs (snubber resistance sqrt(Lp/Cp)) against f1 (ringing frequency with the added capacitor) from 1.2500e+07 Hz to 3.7500e+07 Hz. One curve for each value of f0 (ringing frequency without the added capacitor): 5.0000e+07 Hz, 2.5000e+07 Hz, 1.0000e+08 Hz. Other inputs as in the worked example: Cadd = 3e-10 F, k = 4.0, V = 48.0 V, fs = 500000.0 Hz. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, f1 = 2.5000e+07 Hz, Rs = 31.831 ohm.*
 
 ```python
 power_electronics_ai999x.solve('pe_rc_snubber_ringing', f0=50000000.0, f1=25000000.0, Cadd=3e-10, k=4.0, V=48.0, fs=500000.0)
@@ -3871,17 +3583,13 @@ $$
 - **Assumes:** lossless resonant transition starting at 0 V
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Time to reach Vin (or to the voltage peak](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-zvs-transition-live-1)
+![achieved or not achieved (zvs) over Vin (voltage the node must swing) from 40 V to 4000 V and Ceq (total node capacitance) from 4](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-zvs-transition-decision)
 
-*Time to reach Vin (or to the voltage peak... as Vin runs from 240 to 560 V, every other input as you entered it (41 solutions). Marked: your Vin = 400 V gives t_transition = 5.714e-08. Your inputs: Vin = 400 V, Ceq = 400 pF, L = 20 uH, I0 = 3 A.*
+*achieved or not achieved (zvs) over Vin (voltage the node must swing) from 40 V to 4000 V and Ceq (total node capacitance) from 4.0000e-11 F to 4.0000e-09 F (logarithmic axes): each of the 31 × 21 cells is one run of power-electronics-ai999x, coloured by the verdict it returned, achieved: 396 cells, not achieved: 255 cells. Other inputs as in the worked example: L = 1.9999999999999998e-05 H, I0 = 3.0 A. Marked: the worked example, Vin = 400 V, Ceq = 4.0000e-10 F → achieved.*
 
-![Achieved or not achieved for 25 5 x 5 combinations of Vin and I0 around your inputs (the other inputs as entered); the ring marks your inputs, which give achieved](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-zvs-transition-live-2)
+![t_transition (time to reach Vin (or to the voltage peak when ZVS fails)) against L (resonant (leakage) inductance) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-zvs-transition-curve)
 
-*Achieved or not achieved for 25 5 x 5 combinations of Vin and I0 around your inputs (the other inputs as entered); the ring marks your inputs, which give achieved. Blank cells admit no answer. Your inputs: Vin = 400 V, Ceq = 400 pF, L = 20 uH, I0 = 3 A.*
-
-![Time to reach Vin (or to the voltage peak](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-zvs-transition-live-3)
-
-*Time to reach Vin (or to the voltage peak... as I0 runs from 1.8 to 4.2 A, every other input as you entered it (27 solutions). Marked: your I0 = 3 A gives t_transition = 5.714e-08. Your inputs: Vin = 400 V, Ceq = 400 pF, L = 20 uH, I0 = 3 A.*
+*t_transition (time to reach Vin (or to the voltage peak when ZVS fails)) against L (resonant (leakage) inductance) from 2.0000e-06 H to 0.0002 H on a logarithmic axis. One curve for each value of Ceq (total node capacitance): 4.0000e-10 F, 2.0000e-10 F, 8.0000e-10 F. Other inputs as in the worked example: Vin = 400.0 V, I0 = 3.0 A. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 2.0000e-05 H, t_transition = 5.7142e-08 s.*
 
 ```python
 power_electronics_ai999x.solve('pe_zvs_transition', Vin=400.0, Ceq=4e-10, L=2e-05, I0=3.0)
@@ -3932,17 +3640,13 @@ $$
 - **Assumes:** steady state; the sink is isothermal
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Hottest junction and heat-sink temperature as Ta runs from 273](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-thermal-shared-heatsink-live-1)
+![junction temperature of each device, kelvin (Tj) returned by power-electronics-ai999x for the worked example, one value for each position in the list (3 values, first 360](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-thermal-shared-heatsink-series)
 
-*Hottest junction and heat-sink temperature as Ta runs from 273.1 to 353.1 K, every other input as you entered it (41 solutions). Marked: your Ta = 313.1 K gives Tj_max = 360.6. Your inputs: P = 20, 20, 15, Rjc = 0.8 K/W, Rcs = 0.2 K/W, Rsa = 0.5 K/W, Ta = 313.15 K.*
+*junction temperature of each device, kelvin (Tj) returned by power-electronics-ai999x for the worked example, one value for each position in the list (3 values, first 360.65, last 355.65, largest 360.65). Inputs: P = [20.0, 20.0, 15.0], Rjc = 0.8 K/W, Rcs = 0.2 K/W, Rsa = 0.5 K/W, Ta = 313.15 K.*
 
-![Every entry of Tj as computed for your inputs (3 entries: 360](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-thermal-shared-heatsink-live-2)
+![Tj_max (hottest junction) against Ta (ambient temperature) from 156](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-thermal-shared-heatsink-curve)
 
-*Every entry of Tj as computed for your inputs (3 entries: 360.6, 360.6, 355.6). Your inputs: P = 20, 20, 15, Rjc = 0.8 K/W, Rcs = 0.2 K/W, Rsa = 0.5 K/W, Ta = 313.15 K.*
-
-![Hottest junction and heat-sink temperature as P[1] runs from 0 to 40, every other input as you entered it (21 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-thermal-shared-heatsink-live-3)
-
-*Hottest junction and heat-sink temperature as P[1] runs from 0 to 40, every other input as you entered it (21 solutions). Marked: your P[1] = 20 gives Tj_max = 360.6. Your inputs: P = 20, 20, 15, Rjc = 0.8 K/W, Rcs = 0.2 K/W, Rsa = 0.5 K/W, Ta = 313.15 K.*
+*Tj_max (hottest junction) against Ta (ambient temperature) from 156.575 K to 469.725 K. One curve for each value of Rsa (sink-to-ambient resistance): 0.5 K/W, 0.25 K/W, 1 K/W. Other inputs as in the worked example: P = [20.0, 20.0, 15.0], Rjc = 0.8 K/W, Rcs = 0.2 K/W. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Ta = 313.15 K, Tj_max = 360.65 K.*
 
 ```python
 power_electronics_ai999x.solve('pe_thermal_shared_heatsink', P=[20.0, 20.0, 15.0], Rjc=0.8, Rcs=0.2, Rsa=0.5, Ta=313.15)
@@ -3992,17 +3696,13 @@ $$
 - **Assumes:** linear network, starting from thermal equilibrium
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Foster network as given: thermal resistances R against time constants tau (3 terms), logarithmic horizontal axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-transient-thermal-xy)
+![The data R (Foster thermal resistances in kelvin per watt) against tau (Foster time constants in seconds) as given in the worked example (3 points), logarithmic horizontal axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-transient-thermal-xy)
 
-*The Foster network as given: thermal resistances R against time constants tau (3 terms), logarithmic horizontal axis. Returned by the model for this network: Zth = 0.1736 K/W, dTj = 86.81 K, Rth_total = 0.3 K/W, dTj_steady = 150 K. Your inputs: R = 0.05, 0.1, 0.15, tau = 0.0001, 0.003, 0.05, P = 500 W, tp = 0.01 s.*
+*The data R (Foster thermal resistances in kelvin per watt) against tau (Foster time constants in seconds) as given in the worked example (3 points), logarithmic horizontal axis. Also returned: Zth = 0.173623 K/W, dTj = 86.8115 K, Rth_total = 0.3 K/W, dTj_steady = 150 K. Other inputs: P = 500.0 W, tp = 0.01 s.*
 
-![Junction temperature rise at the end of the](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-transient-thermal-live-1)
+![dTj (junction temperature rise at the end of the pulse) against P (pulse power) from 250 W to 750 W](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-transient-thermal-curve)
 
-*Junction temperature rise at the end of the... as P runs from 300 to 700 W, every other input as you entered it (41 solutions). Marked: your P = 500 W gives dTj = 86.81. Your inputs: R = 0.05, 0.1, 0.15, tau = 0.0001, 0.003, 0.05, P = 500 W, tp = 0.01 s.*
-
-![Junction temperature rise at the end of the](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-transient-thermal-live-2)
-
-*Junction temperature rise at the end of the... as tp runs from 0.006 to 0.014 s, every other input as you entered it (29 solutions). Marked: your tp = 0.01 s gives dTj = 86.81. Your inputs: R = 0.05, 0.1, 0.15, tau = 0.0001, 0.003, 0.05, P = 500 W, tp = 0.01 s.*
+*dTj (junction temperature rise at the end of the pulse) against P (pulse power) from 250 W to 750 W. One curve for each value of tp (pulse duration): 0.01 s, 0.005 s, 0.02 s. Other inputs as in the worked example: R = [0.05, 0.1, 0.15], tau = [0.0001, 0.003, 0.05]. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, P = 500 W, dTj = 86.8115 K.*
 
 ```python
 power_electronics_ai999x.solve('pe_foster_transient_thermal', R=[0.05, 0.1, 0.15], tau=[0.0001, 0.003, 0.05], P=500.0, tp=0.01)
@@ -4052,17 +3752,13 @@ $$
 - **Assumes:** periodic steady state; $tp < T$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![The Foster network as given: thermal resistances R against time constants tau (3 terms), logarithmic horizontal axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-periodic-pulses-xy)
+![The data R (Foster thermal resistances in kelvin per watt) against tau (Foster time constants in seconds) as given in the worked example (3 points), logarithmic horizontal axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-periodic-pulses-xy)
 
-*The Foster network as given: thermal resistances R against time constants tau (3 terms), logarithmic horizontal axis. Returned by the model for this network: dT_peak = 66.45 K, dT_min = 15.58 K, dT_avg = 30 K, ripple = 50.87 K. Your inputs: R = 0.05, 0.1, 0.15, tau = 0.0001, 0.003, 0.05, P = 500 W, tp = 0.002 s, T = 0.01 s.*
+*The data R (Foster thermal resistances in kelvin per watt) against tau (Foster time constants in seconds) as given in the worked example (3 points), logarithmic horizontal axis. Also returned: dT_peak = 66.4525 K, dT_min = 15.5776 K, dT_avg = 30 K, ripple = 50.8749 K. Other inputs: P = 500.0 W, tp = 0.002 s, T = 0.01 s.*
 
-![Peak temperature rise (end of each pulse) as T runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-periodic-pulses-live-1)
+![dT_peak (peak temperature rise (end of each pulse)) against T (pulse period) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-periodic-pulses-curve)
 
-*Peak temperature rise (end of each pulse) as T runs from 0.006 to 0.014 s, every other input as you entered it (41 solutions). Marked: your T = 0.01 s gives dT_peak = 66.45. Your inputs: R = 0.05, 0.1, 0.15, tau = 0.0001, 0.003, 0.05, P = 500 W, tp = 0.002 s, T = 0.01 s.*
-
-![Peak temperature rise (end of each pulse) as tp runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-foster-periodic-pulses-live-2)
-
-*Peak temperature rise (end of each pulse) as tp runs from 0.0012 to 0.0028 s, every other input as you entered it (29 solutions). Marked: your tp = 0.002 s gives dT_peak = 66.45. Your inputs: R = 0.05, 0.1, 0.15, tau = 0.0001, 0.003, 0.05, P = 500 W, tp = 0.002 s, T = 0.01 s.*
+*dT_peak (peak temperature rise (end of each pulse)) against T (pulse period) from 0.001 s to 0.1 s on a logarithmic axis. One curve for each value of P (pulse power): 500 W, 250 W, 1000 W. Other inputs as in the worked example: R = [0.05, 0.1, 0.15], tau = [0.0001, 0.003, 0.05], tp = 0.002 s. 34 points per curve computed by power-electronics-ai999x; marked: the worked example, T = 0.01 s, dT_peak = 66.4525 K.*
 
 ```python
 power_electronics_ai999x.solve('pe_foster_periodic_pulses', R=[0.05, 0.1, 0.15], tau=[0.0001, 0.003, 0.05], P=500.0, tp=0.002, T=0.01)
@@ -4113,17 +3809,9 @@ $$
 - **Assumes:** the core does not saturate; no dc bias
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Primary turns as f runs from 6e+04 to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-transformer-turns-live-1)
+![Np (primary turns (before rounding up)) against f (frequency) from 50000 Hz to 150000 Hz](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-transformer-turns-curve)
 
-*Primary turns as f runs from 6e+04 to 1.4e+05 Hz, every other input as you entered it (41 solutions). Marked: your f = 1e+05 Hz gives Np = 6.4. Your inputs: waveform = square, V = 48 V, f = 100000 Hz, Bmax = 0.15 T, Ac = 0.000125 m^2, Vs = 12 V.*
-
-![Primary turns for every choice of waveform, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-transformer-turns-live-2)
-
-*Primary turns for every choice of waveform, every other input as you entered it (highlighted: your choice). sine: 5.762; square: 6.4. Your inputs: waveform = square, V = 48 V, f = 100000 Hz, Bmax = 0.15 T, Ac = 0.000125 m^2, Vs = 12 V.*
-
-![Primary turns as Bmax runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-transformer-turns-live-3)
-
-*Primary turns as Bmax runs from 0.09 to 0.21 T, every other input as you entered it (29 solutions). Marked: your Bmax = 0.15 T gives Np = 6.4. Your inputs: waveform = square, V = 48 V, f = 100000 Hz, Bmax = 0.15 T, Ac = 0.000125 m^2, Vs = 12 V.*
+*Np (primary turns (before rounding up)) against f (frequency) from 50000 Hz to 150000 Hz. One curve for each value of V (primary voltage (RMS for sine, amplitude for square)): 48 V, 24 V, 96 V. Other inputs as in the worked example: waveform = square, Bmax = 0.15 T, Ac = 0.000125 m^2, Vs = 12.0 V. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 100000 Hz, Np = 6.4.*
 
 ```python
 power_electronics_ai999x.solve('pe_transformer_turns', waveform='square', V=48.0, f=100000.0, Bmax=0.15, Ac=0.000125, Vs=12.0)
@@ -4173,13 +3861,9 @@ $$
 - **Assumes:** gap reluctance dominates; no fringing
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Turns as Ipk runs from 6 to 14 A, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-gapped-inductor-design-live-1)
+![N (turns (before rounding)) against Bmax (peak flux density allowed) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-gapped-inductor-design-curve)
 
-*Turns as Ipk runs from 6 to 14 A, every other input as you entered it (41 solutions). Marked: your Ipk = 10 A gives N = 33.33. Your inputs: L = 100 uH, Ipk = 10 A, Bmax = 300 mT, Ac = 1 cm^2.*
-
-![Turns as Bmax runs from 180 to 420 mT, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-gapped-inductor-design-live-2)
-
-*Turns as Bmax runs from 180 to 420 mT, every other input as you entered it (29 solutions). Marked: your Bmax = 300 mT gives N = 33.33. Your inputs: L = 100 uH, Ipk = 10 A, Bmax = 300 mT, Ac = 1 cm^2.*
+*N (turns (before rounding)) against Bmax (peak flux density allowed) from 0.15 T to 0.45 T. One curve for each value of L (inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Ipk = 10.0 A, Ac = 0.0001 m^2. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, Bmax = 0.3 T, N = 33.3333.*
 
 ```python
 power_electronics_ai999x.solve('pe_gapped_inductor_design', L=0.0001, Ipk=10.0, Bmax=0.3, Ac=0.0001)
@@ -4228,13 +3912,9 @@ $$
 - **Assumes:** $0 < Ku < 1$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Area product Ac Wa as Bmax runs from 180 to 420 mT, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-inductor-area-product-live-1)
+![Ap (area product Ac Wa) against Ku (window utilisation factor (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-inductor-area-product-curve)
 
-*Area product Ac Wa as Bmax runs from 180 to 420 mT, every other input as you entered it (41 solutions). Marked: your Bmax = 300 mT gives Ap = 2.5e-08. Your inputs: L = 100 uH, Ipk = 12 A, Irms = 10 A, Bmax = 300 mT, J = 4 A/mm^2, Ku = 0.4.*
-
-![Area product Ac Wa as J runs from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-inductor-area-product-live-2)
-
-*Area product Ac Wa as J runs from 2.4 to 5.6 A/mm^2, every other input as you entered it (29 solutions). Marked: your J = 4 A/mm^2 gives Ap = 2.5e-08. Your inputs: L = 100 uH, Ipk = 12 A, Irms = 10 A, Bmax = 300 mT, J = 4 A/mm^2, Ku = 0.4.*
+*Ap (area product Ac Wa) against Ku (window utilisation factor (a fraction or %)) from 0.02 to 0.98. One curve for each value of L (inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Ipk = 12.0 A, Irms = 10.0 A, Bmax = 0.3 T, J = 4000000.0 A/m^2. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, Ku = 0.4, Ap = 2.5000e-08 m^4.*
 
 ```python
 power_electronics_ai999x.solve('pe_inductor_area_product', L=0.0001, Ipk=12.0, Irms=10.0, Bmax=0.3, J=4000000.0, Ku=0.4)
@@ -4285,17 +3965,9 @@ $$
 - **Assumes:** two windings at the same current density
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Area product as Po runs from 150 to 350 W, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-transformer-area-product-live-1)
+![Ap (area product) against eff (efficiency (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-transformer-area-product-curve)
 
-*Area product as Po runs from 150 to 350 W, every other input as you entered it (41 solutions). Marked: your Po = 250 W gives Ap = 8.018e-09. Your inputs: Po = 250 W, eff = 0.95, waveform = square, Bm = 0.1 T, f = 100000 Hz, J = 4000000 A/m^2, Ku = 0.4.*
-
-![Area product for every choice of waveform, every other input as you entered it (highlighted: your choice)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-transformer-area-product-live-2)
-
-*Area product for every choice of waveform, every other input as you entered it (highlighted: your choice). sine: 7.219e-09; square: 8.018e-09. Your inputs: Po = 250 W, eff = 0.95, waveform = square, Bm = 0.1 T, f = 100000 Hz, J = 4000000 A/m^2, Ku = 0.4.*
-
-![Area product as Bm runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-transformer-area-product-live-3)
-
-*Area product as Bm runs from 0.06 to 0.14 T, every other input as you entered it (29 solutions). Marked: your Bm = 0.1 T gives Ap = 8.018e-09. Your inputs: Po = 250 W, eff = 0.95, waveform = square, Bm = 0.1 T, f = 100000 Hz, J = 4000000 A/m^2, Ku = 0.4.*
+*Ap (area product) against eff (efficiency (a fraction or %)) from 0.02 to 0.98. One curve for each value of Ku (window utilisation (a fraction or %)): 0.4, 0.26, 0.74. Other inputs as in the worked example: Po = 250.0 W, waveform = square, Bm = 0.1 T, f = 100000.0 Hz, J = 4000000.0 A/m^2. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, eff = 0.95, Ap = 8.0181e-09 m^4.*
 
 ```python
 power_electronics_ai999x.solve('pe_transformer_area_product', Po=250.0, eff=0.95, waveform='square', Bm=0.1, f=100000.0, J=4000000.0, Ku=0.4)
@@ -4346,13 +4018,9 @@ $$
 - **Assumes:** sinusoidal flux, within the parameters' fitted range
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Core loss density as α runs from 0](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-steinmetz-core-loss-live-1.svg)
+![Pv (core loss density) against beta (flux-density exponent) from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-steinmetz-core-loss-curve)
 
-*Core loss density as α runs from 0.35 to 2.45, every other input as you entered it (41 solutions). Marked: your α = 1.4 gives Pv = 1.012e+05. Your inputs: k = 3.2, alpha = 1.4, beta = 2.5, f = 100 kHz, Bpk = 100 mT, Vc = 5 cm^3.*
-
-![Core loss density as β runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-steinmetz-core-loss-live-2)
-
-*Core loss density as β runs from 0.625 to 4.375, every other input as you entered it (29 solutions). Marked: your β = 2.5 gives Pv = 1.012e+05. Your inputs: k = 3.2, alpha = 1.4, beta = 2.5, f = 100 kHz, Bpk = 100 mT, Vc = 5 cm^3.*
+*Pv (core loss density) against beta (flux-density exponent) from 1.25 to 3.75. One curve for each value of alpha (frequency exponent): 1.4, 0.7, 2.8. Other inputs as in the worked example: k = 3.2, f = 100000.0 Hz, Bpk = 0.1 T, Vc = 5.000000000000001e-06 m^3. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, beta = 2.5, Pv = 101193 W/m^3.*
 
 ```python
 power_electronics_ai999x.solve('pe_steinmetz_core_loss', k=3.2, alpha=1.4, beta=2.5, f=100000.0, Bpk=0.1, Vc=5e-06)
@@ -4404,13 +4072,9 @@ $$
 - **Assumes:** piecewise-linear flux, no relaxation effects
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Core loss density as α runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-igse-triangular-core-loss-live-1)
+![Pv (core loss density) against D (duty cycle of the rising flux (a fraction or %)) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-igse-triangular-core-loss-curve)
 
-*Core loss density as α runs from 0.35 to 2.45, every other input as you entered it (41 solutions). Marked: your α = 1.4 gives Pv = 9.432e+04. Your inputs: k = 3.2, alpha = 1.4, beta = 2.5, f = 100 kHz, dB = 200 mT, D = 0.5, Vc = 5 cm^3.*
-
-![Core loss density as β runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-igse-triangular-core-loss-live-2)
-
-*Core loss density as β runs from 0.625 to 4.375, every other input as you entered it (29 solutions). Marked: your β = 2.5 gives Pv = 9.432e+04. Your inputs: k = 3.2, alpha = 1.4, beta = 2.5, f = 100 kHz, dB = 200 mT, D = 0.5, Vc = 5 cm^3.*
+*Pv (core loss density) against D (duty cycle of the rising flux (a fraction or %)) from 0.02 to 0.98. One curve for each value of alpha (frequency exponent): 1.4, 0.7, 2.8. Other inputs as in the worked example: k = 3.2, beta = 2.5, f = 100000.0 Hz, dB = 0.2 T, Vc = 5.000000000000001e-06 m^3. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, D = 0.5, Pv = 94324.8 W/m^3.*
 
 ```python
 power_electronics_ai999x.solve('pe_igse_triangular_core_loss', k=3.2, alpha=1.4, beta=2.5, f=100000.0, dB=0.2, D=0.5, Vc=5e-06)
@@ -4460,13 +4124,9 @@ $$
 - **Assumes:** isolated straight wire (no proximity effect); radius at most 10 skin depths
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Rac/Rdc as d runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-skin-effect-round-wire-live-1)
+![ratio (Rac/Rdc) against d (wire diameter) from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-skin-effect-round-wire-curve)
 
-*Rac/Rdc as d runs from 0.6 to 1.4 mm, every other input as you entered it (41 solutions). Marked: your d = 1 mm gives ratio = 1.451. Your inputs: d = 1 mm, f = 100 kHz, rho = 1.72e-08 ohm*m, length = 1 m.*
-
-![AC resistance as length runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-skin-effect-round-wire-live-2)
-
-*AC resistance as length runs from 0.6 to 1.4 m, every other input as you entered it (29 solutions). Marked: your length = 1 m gives Rac = 0.03178. Your inputs: d = 1 mm, f = 100 kHz, rho = 1.72e-08 ohm*m, length = 1 m.*
+*ratio (Rac/Rdc) against d (wire diameter) from 0.0001 m to 0.01 m on a logarithmic axis. One curve for each value of f (frequency): 100000 Hz, 50000 Hz, 200000 Hz. Other inputs as in the worked example: rho = 1.72e-08 ohm*m, length = 1.0 m. 33 points per curve computed by power-electronics-ai999x; marked: the worked example, d = 0.001 m, ratio = 1.45126.*
 
 ```python
 power_electronics_ai999x.solve('pe_skin_effect_round_wire', d=0.001, f=100000.0, rho=1.72e-08, length=1.0)
@@ -4514,13 +4174,9 @@ $$
 - **Assumes:** full-width layers (foil or porosity-corrected); sinusoidal current
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![AC-to-DC resistance factor as h runs from 0](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dowell-proximity-factor-live-1)
+![FR (AC-to-DC resistance factor) against h (layer (conductor) thickness) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dowell-proximity-factor-curve)
 
-*AC-to-DC resistance factor as h runs from 0.12 to 0.28 mm, every other input as you entered it (41 solutions). Marked: your h = 0.2 mm gives FR = 2.431. Your inputs: h = 0.2 mm, f = 100 kHz, rho = 1.72e-08 ohm*m, m = 4.*
-
-![AC-to-DC resistance factor as ρ runs from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dowell-proximity-factor-live-2)
-
-*AC-to-DC resistance factor as ρ runs from 1.032e-08 to 2.408e-08 ohm*m, every other input as you entered it (29 solutions). Marked: your ρ = 1.72e-08 ohm*m gives FR = 2.431. Your inputs: h = 0.2 mm, f = 100 kHz, rho = 1.72e-08 ohm*m, m = 4.*
+*FR (AC-to-DC resistance factor) against h (layer (conductor) thickness) from 2.0000e-05 m to 0.002 m on a logarithmic axis. One curve for each value of f (frequency): 100000 Hz, 50000 Hz, 200000 Hz. Other inputs as in the worked example: rho = 1.72e-08 ohm*m, m = 4. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, h = 0.0002 m, FR = 2.43113.*
 
 ```python
 power_electronics_ai999x.solve('pe_dowell_proximity_factor', h=0.0002, f=100000.0, rho=1.72e-08, m=4)
@@ -4570,13 +4226,9 @@ $$
 - **Assumes:** first-harmonic approximation
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Tank voltage gain as f runs from 72 to 168 kHz, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-series-resonant-gain-live-1)
+![M (tank voltage gain) against f (switching frequency) from 12000 Hz to 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-series-resonant-gain-curve)
 
-*Tank voltage gain as f runs from 72 to 168 kHz, every other input as you entered it (41 solutions). Marked: your f = 120 kHz gives M = 0.802. Your inputs: Lr = 100 uH, Cr = 25 nF, R = 30 ohm, f = 120 kHz.*
-
-![Tank voltage gain as R runs from 18 to 42 ohm, every other input as you entered it (29 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-series-resonant-gain-live-2)
-
-*Tank voltage gain as R runs from 18 to 42 ohm, every other input as you entered it (29 solutions). Marked: your R = 30 ohm gives M = 0.802. Your inputs: Lr = 100 uH, Cr = 25 nF, R = 30 ohm, f = 120 kHz.*
+*M (tank voltage gain) against f (switching frequency) from 12000 Hz to 1.2e+06 Hz on a logarithmic axis. One curve for each value of Lr (resonant inductance): 1.0000e-04 H, 5.0000e-05 H, 0.0002 H. Other inputs as in the worked example: Cr = 2.5000000000000002e-08 F, R = 30.0 ohm. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 120000 Hz, M = 0.801964.*
 
 ```python
 power_electronics_ai999x.solve('pe_series_resonant_gain', Lr=0.0001, Cr=2.5e-08, R=30.0, f=120000.0)
@@ -4629,13 +4281,9 @@ $$
 - **Assumes:** first-harmonic approximation
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Tank voltage gain as n runs from 2 to 14, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-llc-resonant-gain-live-1)
+![M (tank voltage gain) against f (switching frequency) from 10000 Hz to 1e+06 Hz on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-llc-resonant-gain-curve)
 
-*Tank voltage gain as n runs from 2 to 14, every other input as you entered it (41 solutions). Marked: your n = 8 gives M = 1.098. Your inputs: Lr = 60 uH, Cr = 27 nF, Lm = 300 uH, n = 8, R = 2 ohm, f = 100 kHz.*
-
-![Tank voltage gain as R runs from 1](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-llc-resonant-gain-live-2)
-
-*Tank voltage gain as R runs from 1.2 to 2.8 ohm, every other input as you entered it (29 solutions). Marked: your R = 2 ohm gives M = 1.098. Your inputs: Lr = 60 uH, Cr = 27 nF, Lm = 300 uH, n = 8, R = 2 ohm, f = 100 kHz.*
+*M (tank voltage gain) against f (switching frequency) from 10000 Hz to 1e+06 Hz on a logarithmic axis. One curve for each value of Lm (magnetizing inductance): 0.0003 H, 0.00015 H, 0.0006 H. Other inputs as in the worked example: Lr = 5.9999999999999995e-05 H, Cr = 2.7e-08 F, n = 8.0, R = 2.0 ohm. 41 points per curve computed by power-electronics-ai999x; marked: the worked example, f = 100000 Hz, M = 1.09817.*
 
 ```python
 power_electronics_ai999x.solve('pe_llc_resonant_gain', Lr=6e-05, Cr=2.7e-08, Lm=0.0003, n=8.0, R=2.0, f=100000.0)
@@ -4687,13 +4335,9 @@ $$
 - **Assumes:** square-wave bridges, single phase shift $0 < \phi  \leq  90$ degrees
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Transferred power and maximum transferable power as V1 runs from 240 to 560 V, every other input as you entered it (41 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dual-active-bridge-power-live-1)
+![P (transferred power) against L (series (leakage) inductance referred to the primary) from 2](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dual-active-bridge-power-curve)
 
-*Transferred power and maximum transferable power as V1 runs from 240 to 560 V, every other input as you entered it (41 solutions). Marked: your V1 = 400 V gives P = 2133. Your inputs: V1 = 400 V, V2 = 48 V, n = 8, L = 50 uH, fs = 100 kHz, phi = 30 deg.*
-
-![Transferred power and maximum transferable power as V2 runs from 28](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-dual-active-bridge-power-live-2)
-
-*Transferred power and maximum transferable power as V2 runs from 28.8 to 67.2 V, every other input as you entered it (29 solutions). Marked: your V2 = 48 V gives P = 2133. Your inputs: V1 = 400 V, V2 = 48 V, n = 8, L = 50 uH, fs = 100 kHz, phi = 30 deg.*
+*P (transferred power) against L (series (leakage) inductance referred to the primary) from 2.5000e-05 H to 7.5000e-05 H. One curve for each value of V1 (primary dc voltage): 400 V, 200 V, 800 V. Other inputs as in the worked example: V2 = 48.0 V, n = 8.0, fs = 100000.0 Hz, phi = 0.5235987755982988 rad. 31 points per curve computed by power-electronics-ai999x; marked: the worked example, L = 5.0000e-05 H, P = 2133.33 W.*
 
 ```python
 power_electronics_ai999x.solve('pe_dual_active_bridge_power', V1=400.0, V2=48.0, n=8.0, L=5e-05, fs=100000.0, phi=0.5235987755982988)
@@ -4742,13 +4386,9 @@ $$
 - **Assumes:** constant-power load; $V_{2} < V_{1}$
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Required capacitance as V2 runs from 180 to 384 V, every other input as you entered it (35 solutions)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-hold-up-capacitor-live-1)
+![C (required capacitance) against V1 (starting capacitor voltage) from 195 V to 585 V](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-hold-up-capacitor-curve)
 
-*Required capacitance as V2 runs from 180 to 384 V, every other input as you entered it (35 solutions). Marked: your V2 = 300 V gives C = 193.2 uF. Your inputs: Po = 300 W, t_hold = 20 ms, V1 = 390 V, V2 = 300 V.*
-
-![Required capacitance as V1 runs from 300](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-hold-up-capacitor-live-2)
-
-*Required capacitance as V1 runs from 300.9 to 546 V, every other input as you entered it (23 solutions). Marked: your V1 = 390 V gives C = 193.2 uF. Your inputs: Po = 300 W, t_hold = 20 ms, V1 = 390 V, V2 = 300 V.*
+*C (required capacitance) against V1 (starting capacitor voltage) from 195 V to 585 V. One curve for each value of Po (load power drawn from the capacitor): 300 W, 150 W, 600 W. Other inputs as in the worked example: t_hold = 0.02 s, V2 = 300.0 V. 22 points per curve computed by power-electronics-ai999x; marked: the worked example, V1 = 390 V, C = 0.000193237 F.*
 
 ```python
 power_electronics_ai999x.solve('pe_hold_up_capacitor', Po=300.0, t_hold=0.02, V1=390.0, V2=300.0)
@@ -4803,17 +4443,13 @@ $$
 - **Assumes:** unity power factor, continuous conduction; $Vo > sqrt$(2) Vac; small output ripple
 - **Evidence:** certified procedure (gates: conditions, control, examples, fast_enough, questions, reference, sensitivity, templates)
 
-![Largest inductor ripple over the line cycle (dI_max) against RMS line voltage (Vac) from 115 V to 276 V, the other inputs as given: 22 points, each computed by the model (inputs it refuses are left out)](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-pfc-di-max-vs-vac)
+![dI_max (largest inductor ripple over the line cycle) against Vac (RMS line voltage), with C = 3](https://huggingface.co/AI999X/power-electronics-ai999x/resolve/main/figures/pe-boost-pfc-di-max-vs-vac.svg)
 
-*Largest inductor ripple over the line cycle (dI_max) against RMS line voltage (Vac) from 115 V to 276 V, the other inputs as given: 22 points, each computed by the model (inputs it refuses are left out). Marked: the inputs given, Vac = 230 V, dI_max = 3.077 A. Your inputs: Vac = 230 V, f_line = 50 Hz, Vo = 400 V, Po = 500 W, eff = 0.95, L = 500 uH, fs = 65 kHz, C = 330 uF.*
+*dI_max (largest inductor ripple over the line cycle) against Vac (RMS line voltage), with C = 3.30e-4 F, L = 5.00e-4 H, Po = 500 W, Vo = 400 V, eff = 0.95, f_line = 50 Hz, fs = 65000 Hz. 22 points computed by power-electronics-ai999x; marked: Vac = 230, dI_max = 3.07692 A.*
 
-![Largest inductor ripple over the line cycle as Vac runs from 138 to 280](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-pfc-live-1)
+![dI_max (largest inductor ripple over the line cycle) against Vac (RMS line voltage) from 1 V to 460 V on a logarithmic axis](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-pfc-curve)
 
-*Largest inductor ripple over the line cycle as Vac runs from 138 to 280.6 V, every other input as you entered it (32 solutions). Marked: your Vac = 230 V gives dI_max = 3.077. Your inputs: Vac = 230 V, f_line = 50 Hz, Vo = 400 V, Po = 500 W, eff = 0.95, L = 500 uH, fs = 65 kHz, C = 330 uF.*
-
-![Largest inductor ripple over the line cycle as Vo runs from 331](https://www.ai999x.com/?ax_fig=power-electronics-ai999x/pe-boost-pfc-live-2)
-
-*Largest inductor ripple over the line cycle as Vo runs from 331.4 to 560 V, every other input as you entered it (21 solutions). Marked: your Vo = 400 V gives dI_max = 3.077. Your inputs: Vac = 230 V, f_line = 50 Hz, Vo = 400 V, Po = 500 W, eff = 0.95, L = 500 uH, fs = 65 kHz, C = 330 uF.*
+*dI_max (largest inductor ripple over the line cycle) against Vac (RMS line voltage) from 1 V to 460 V on a logarithmic axis. One curve for each value of L (boost inductance): 0.0005 H, 0.00025 H, 0.001 H. Other inputs as in the worked example: f_line = 50.0 Hz, Vo = 400.0 V, Po = 500.0 W, eff = 0.95, fs = 65000.0 Hz, C = 0.00033 F. 25 points per curve computed by power-electronics-ai999x; marked: the worked example, Vac = 230 V, dI_max = 3.07692 A.*
 
 ```python
 power_electronics_ai999x.solve('pe_boost_pfc', Vac=230.0, f_line=50.0, Vo=400.0, Po=500.0, eff=0.95, L=0.0005, fs=65000.0, C=0.00033)
